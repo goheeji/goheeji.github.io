@@ -1,1 +1,535 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-14T03:01:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>email</email></author><entry><title type="html">Firstpost</title><link href="http://localhost:4000/firstpost/" rel="alternate" type="text/html" title="Firstpost" /><published>2020-11-13T00:00:00+09:00</published><updated>2020-11-13T00:00:00+09:00</updated><id>http://localhost:4000/firstpost</id><content type="html" xml:base="http://localhost:4000/firstpost/">&lt;p&gt;test&lt;/p&gt;</content><author><name>고희지</name><email>email</email></author><summary type="html">test</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-16T22:29:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>email</email></author><entry><title type="html">Notice</title><link href="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice/" rel="alternate" type="text/html" title="Notice" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice</id><content type="html" xml:base="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice/">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Notice.:**
+기본적인 Notice
+{: .notice}
+
+**Promary Notice**
+중요한 Notice
+{: .notice--primary}
+
+**Info Notice**
+정보 Notice
+{: .notice--info}
+
+**warning Notice:**
+경고 Notice
+{: .notice--warning}
+
+**Danger Notice:**
+Danger Notice
+{: .notice--danger}
+
+**Success Notice:**
+Success Notice
+{: .notice--success}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Notice.:&lt;/strong&gt;
+기본적인 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--primary&quot;&gt;&lt;strong&gt;Promary Notice&lt;/strong&gt;
+중요한 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Info Notice&lt;/strong&gt;
+정보 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;warning Notice:&lt;/strong&gt;
+경고 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--danger&quot;&gt;&lt;strong&gt;Danger Notice:&lt;/strong&gt;
+Danger Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;strong&gt;Success Notice:&lt;/strong&gt;
+Success Notice&lt;/p&gt;</content><author><name>고희지</name><email>email</email></author><category term="빵부스러기" /><category term="notice" /><category term="jekyll" /><summary type="html">블로그를 보다 저건 어떻게 하는거지 싶은 블로그 작성 문법</summary></entry><entry><title type="html">마크다운(markdown) 문법 총정리</title><link href="http://localhost:4000/markdown/markdown-Syntax/" rel="alternate" type="text/html" title="마크다운(markdown) 문법 총정리" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/markdown/markdown-Syntax</id><content type="html" xml:base="http://localhost:4000/markdown/markdown-Syntax/">&lt;h2 id=&quot;1-헤더-headers&quot;&gt;1. 헤더 Headers&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;큰제목: 문서제목&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gu&quot;&gt;This is a H1
+=============
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h1 id=&quot;this-is-a-h1&quot;&gt;This is a H1&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;작은제목: 문서 부제목&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;This is a H2
+----------------
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h2 id=&quot;this-is-an-h2&quot;&gt;This is an H2&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;글머리: 1~6까지만 지원&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# This is a H1&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;## This is a H2&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;### This is a H3&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;#### This is a H4&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;##### This is a H5&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;###### This is a H6&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h1 id=&quot;this-is-a-h1-1&quot;&gt;This is a H1&lt;/h1&gt;
+
+&lt;h2 id=&quot;this-is-a-h2&quot;&gt;This is a H2&lt;/h2&gt;
+&lt;h3 id=&quot;this-is-a-h3&quot;&gt;This is a H3&lt;/h3&gt;
+&lt;h4 id=&quot;this-is-a-h4&quot;&gt;This is a H4&lt;/h4&gt;
+&lt;h5 id=&quot;this-is-a-h5&quot;&gt;This is a H5&lt;/h5&gt;
+&lt;h6 id=&quot;this-is-a-h6&quot;&gt;This is a H6&lt;/h6&gt;
+
+&lt;h2 id=&quot;2--블럭인용&quot;&gt;2.  블럭인용&lt;/h2&gt;
+&lt;p&gt;이메일에서 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; 블럭인용문자를 이용한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gt&quot;&gt;&amp;gt; This is a first blockqoute.&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt; &amp;gt;This is a second blockquote.&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt; &amp;gt; &amp;gt; This is a third blockquote.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a first blockquote.&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;This is a second blockquote.&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;This is a third blockquote.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이 안에서는 다른 마크다운 요소를 포함 할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gt&quot;&gt;&amp;gt; ### This is a H3&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt; * List&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt;  	```&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt;  	code&lt;/span&gt;
+&lt;span class=&quot;gt&quot;&gt;&amp;gt; 	```&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;this-is-a-h3-1&quot;&gt;This is a H3&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;List
+      &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  code
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;3-목록&quot;&gt;3. 목록&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;순서 있는 목록(번호)
+순서있는 목록은 숫자와 점을 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 첫번째
+&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; 두번째
+&lt;span class=&quot;p&quot;&gt;3.&lt;/span&gt; 세번째
+&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 1을 다시 써도 네번째
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;첫번째&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;두번째&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;세번째&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;1을 다시 써도 네번째&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;순서없는 목록(글머리 기호 : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt; 지원)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;  *&lt;/span&gt; 가
+&lt;span class=&quot;p&quot;&gt;  	*&lt;/span&gt; 나
+&lt;span class=&quot;p&quot;&gt;  		*&lt;/span&gt; 다
+&lt;span class=&quot;p&quot;&gt;  
+  +&lt;/span&gt; 가
+&lt;span class=&quot;p&quot;&gt;  	+&lt;/span&gt; 나
+&lt;span class=&quot;p&quot;&gt;  		+&lt;/span&gt; 다
+&lt;span class=&quot;p&quot;&gt;  
+  -&lt;/span&gt; 가
+&lt;span class=&quot;p&quot;&gt;  	-&lt;/span&gt; 나
+&lt;span class=&quot;p&quot;&gt;  		-&lt;/span&gt; 다
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;가
+    &lt;ul&gt;
+      &lt;li&gt;나
+        &lt;ul&gt;
+          &lt;li&gt;다&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;가
+    &lt;ul&gt;
+      &lt;li&gt;나
+        &lt;ul&gt;
+          &lt;li&gt;다&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;가
+    &lt;ul&gt;
+      &lt;li&gt;나
+        &lt;ul&gt;
+          &lt;li&gt;다&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;현재까지는 어떤 번호를 입력해도 순서는 내림차순으로 정의된다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-코드강조&quot;&gt;4. 코드강조&lt;/h2&gt;
+
+&lt;p&gt;4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속된다.&lt;/p&gt;
+&lt;h3 id=&quot;41-인라인inline-코드&quot;&gt;4.1 인라인(inline) 코드&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grave&lt;/code&gt;는 키보드상 숫자 1 옆에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~&lt;/code&gt; 옆에 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;코드강조&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;블록코드 강조
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
+	 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;코드강조&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ```
+ 블록코드 강조
+ ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;42-들여쓰기&quot;&gt;4.2 들여쓰기&lt;/h3&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a normal paragraph:&lt;span class=&quot;sb&quot;&gt;
+
+    This is a code block.
+    
+&lt;/span&gt;end code block.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;end code block.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;한줄 띄어 쓰지 않으면 인식이 제대로 안되는 문제가 발생한다.&lt;/p&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a normal paragraph:
+    This is a code block.
+end code block.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
+This is a normal paragraph:
+    This is a code block.
+end code block.&lt;/p&gt;
+
+&lt;h3 id=&quot;43-코드블럭&quot;&gt;4.3 코드블럭&lt;/h3&gt;
+
+&lt;p&gt;코드블럭은 다음과 같이 2가지 방식을 사용할 수 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;{code}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt; 이용방식&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;code&amp;gt;&lt;/span&gt;
+public class MyApp{
+	public static void main(String[] args){
+		System.out.println(&quot;Hello, goeasy&quot;);
+	}
+}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code&gt;
+public class MyApp{
+	public static void main(String[] args){
+		System.out.println(&quot;Hello, goeasy&quot;);
+	}
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;코드블럭코드(```)을 이용하는 방법
+    &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;se&quot;&gt;\`&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;``java
+  public class MyApp{
+      public static void main(String[] args){
+          System.out.println(&quot;Hello, goeasy&quot;);
+      }
+  }
+\```&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyApp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, goeasy&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;	
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;	
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-수평선&quot;&gt;5. 수평선&lt;/h2&gt;
+
+&lt;p&gt;아래 줄은 모두 수평선을 만든다. 마크다운 문서를 미리보기로 출력할 때 페이지 나누기 용도로 많이 사용한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+***
+
+* * *
+
+---
+
+*****
+
+- - -
+
+---------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;6-링크&quot;&gt;6. 링크&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;참조링크&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;문법
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;link keyword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Optional Title here&quot;&lt;/span&gt;
+
+적용예시
+Link: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Google&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;googlelink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;googlelink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;https://google.com&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Go google&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Link: [Google][googlelink] 
+[googlelink]:  https://google.com “Go google”&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;외부링크&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;문법: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+적용예시: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Google&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://google.com,&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;google link&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Link: &lt;a href=&quot;https://google.com,&quot; title=&quot;google link&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자동연결&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;일반적인 URL 혹은 이메일주소인 경우 적절한 형식으로 링크를 형성한다.
+&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 외부링크: &lt;span class=&quot;nv&quot;&gt;&amp;lt;https://example.com&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 외부링크: https://example.com
+&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 이메일 링크: &lt;span class=&quot;nv&quot;&gt;&amp;lt;addrres@example.com&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;외부링크: &lt;a href=&quot;https://example.com&quot;&gt;https://example.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;외부링크: https://example.com&lt;/li&gt;
+  &lt;li&gt;이메일 링크: &lt;a href=&quot;mailto:addrres@example.com&quot;&gt;addrres@example.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;7-강조&quot;&gt;7. 강조&lt;/h2&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;ge&quot;&gt;*single asterisks*&lt;/span&gt;
+&lt;span class=&quot;ge&quot;&gt;_single underscores_&lt;/span&gt;
+&lt;span class=&quot;gs&quot;&gt;**double asterisks**&lt;/span&gt;
+&lt;span class=&quot;gs&quot;&gt;__double underscores__&lt;/span&gt;
+~~cancelline~~
+문장중간에 사용할 경우에는 &lt;span class=&quot;gs&quot;&gt;**띄어 쓰기**&lt;/span&gt;를 사용하는 것이 좋다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt; &lt;br /&gt;
+&lt;em&gt;single underscores&lt;/em&gt; &lt;br /&gt;
+&lt;strong&gt;double asterisks&lt;/strong&gt; &lt;br /&gt;
+&lt;strong&gt;double underscores&lt;/strong&gt; &lt;br /&gt;
+&lt;del&gt;cancelline&lt;/del&gt; &lt;br /&gt;
+문장중간에 사용할 경우에는 &lt;strong&gt;띄어 쓰기&lt;/strong&gt;를 사용하는 것이 좋다.&lt;/p&gt;
+
+&lt;h2 id=&quot;8-이미지&quot;&gt;8. 이미지&lt;/h2&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/path/to/img.jpg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/path/to/img.jpg&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Optional title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
+&lt;img src=&quot;D:\smile.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;img src=&quot;D:\smile.png&quot; alt=&quot;Alt text&quot; title=&quot;smile&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;사이즈 조절 기능은 없기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;img width=&quot;&quot; height=&quot;&quot;&amp;gt;&amp;lt;/img&amp;gt;&lt;/code&gt;를 이용한다.&lt;/p&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;D:\smile.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/img&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;D:\smile.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/img&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
+&lt;img src=&quot;D:\smile.png&quot; width=&quot;100px&quot; height=&quot;100px&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt;&amp;lt;/img&amp;gt;
+&lt;img src=&quot;D:\smile.png&quot; width=&quot;10%&quot; height=&quot;10%&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt;&amp;lt;/img&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;9-줄-바꿈&quot;&gt;9. 줄 바꿈&lt;/h2&gt;
+
+&lt;p&gt;3칸 이상 띄어쓰기(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;   &lt;/code&gt;)를 하면 줄이 바뀐다.&lt;/p&gt;
+
+&lt;p&gt;일반 줄바꿈이 동작하지 않는 환경(설정 및 버전에 따라)의 경우, ‘3칸 이상의 띄어쓰기’나 &amp;lt;br&amp;gt;를 활용할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.
+이렇게
+&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.___
+이렇게
+
+동해물과 백두산이 마르고 닳도록 
+하느님이 보우하사 우리나라 만세   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--띄어쓰기 2번--&amp;gt;&lt;/span&gt;
+무궁화 삼천리 화려 강산&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+대한 사람 대한으로 길이 보전하세
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.&lt;br /&gt;이렇게&lt;/li&gt;
+  &lt;li&gt;줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.   &lt;br /&gt;
+이렇게&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;동해물과 백두산이 마르고 닳도록 
+하느님이 보우하사 우리나라 만세 &lt;br /&gt;
+무궁화 삼천리 화려 강산&lt;br /&gt;
+대한 사람 대한으로 길이 보전하세&lt;/p&gt;
+
+&lt;h2 id=&quot;10-table-표&quot;&gt;10. Table 표&lt;/h2&gt;
+
+&lt;p&gt;헤더 셀을 구분할때 3개 이상의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;(hyphen/dash) 기호가 필요하다.
+헤더 셀을 구분하면서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:&lt;/code&gt;(Colons)기호로 셀(열/칸) 안에 내용을 정렬할 수 있다.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;오른쪽 정렬 — &lt;br /&gt;
+가운데 정렬 :—: &lt;br /&gt; 
+왼쪽 정렬 —: &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;가장 좌측과 가장 우측에 있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;(virtical bar) 기호는 생략 가능하다.&lt;/p&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 | 2 | 3
+---|:---:|---:
+오른쪽 정렬 | 가운데 정렬 | 왼쪽정렬
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;오른쪽 정렬&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;가운데 정렬&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;왼쪽정렬&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;11-마크다운-포맷-무시하기&quot;&gt;11. 마크다운 포맷 무시하기&lt;/h2&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;ge&quot;&gt;*이건데*&lt;/span&gt;  &lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;이렇게&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;: &lt;br /&gt;
+&lt;em&gt;이건데&lt;/em&gt;  *이렇게*&lt;/p&gt;
+
+&lt;h2 id=&quot;12-이모지-emoji&quot;&gt;12. 이모지 emoji&lt;/h2&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:[이모지 텍스트]:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
+:heart:, :smile:, :revolving_hearts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;단축키&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;window10: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;윈도우 키&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;마침표(.)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;mac: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Control&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spacce bar&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;이모지 텍스트 참조: &lt;a href=&quot;https://doozi316.github.io/markdown/2020/08/10/MD2/,&quot; title=&quot;emojiRef&quot;&gt;emoji&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;13-체크박스check-box&quot;&gt;13. 체크박스(Check Box)&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 뒤에 띄어쓰기 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt;를 넣어 작성한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt;안에 띄어쓰기를 하면 빈 체크박스, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;를 넣으면 체크된 체크박스가 생긴다.&lt;/p&gt;
+
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; [ ] 운동하기
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; [x] 강의듣기
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;운동하기&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;강의듣기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;http://nblog.syszone.co.kr/archives/9917&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://steemit.com/kr/@nand/markdown&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://heropy.blog/2017/09/30/markdown&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://gist.github.com/ihoneymon/652be052a0727ad59601&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>고희지</name><email>email</email></author><category term="Markdown" /><category term="Markdown" /><summary type="html">마크다운 문법을 모아모아봤다.</summary></entry></feed>

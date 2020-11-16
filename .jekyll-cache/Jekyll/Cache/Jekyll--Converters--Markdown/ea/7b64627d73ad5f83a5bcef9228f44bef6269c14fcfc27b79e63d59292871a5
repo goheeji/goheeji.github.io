@@ -1,0 +1,47 @@
+I"�<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**Notice.:**
+기본적인 Notice
+{: .notice}
+
+**Promary Notice**
+중요한 Notice
+{: .notice--primary}
+
+**Info Notice**
+정보 Notice
+{: .notice--info}
+
+**warning Notice:**
+경고 Notice
+{: .notice--warning}
+
+**Danger Notice:**
+Danger Notice
+{: .notice--danger}
+
+**Success Notice:**
+Success Notice
+{: .notice--success}
+
+</code></pre></div></div>
+
+<p><strong>적용예:</strong></p>
+
+<p class="notice"><strong>Notice.:</strong>
+기본적인 Notice</p>
+
+<p class="notice--primary"><strong>Promary Notice</strong>
+중요한 Notice</p>
+
+<p class="notice--info"><strong>Info Notice</strong>
+정보 Notice</p>
+
+<p class="notice--warning"><strong>warning Notice:</strong>
+경고 Notice</p>
+
+<p class="notice--danger"><strong>Danger Notice:</strong>
+Danger Notice</p>
+
+<p class="notice--success"><strong>Success Notice:</strong>
+Success Notice</p>
+
+:ET

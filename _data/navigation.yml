@@ -1,7 +1,16 @@
 # main links
 main:
+  - title: "Git"
+    url: /gits/
+  - title: "Markdown"
+    url: /markdowns/
+  - title: "빵 부스러기"
+    url: /breadcrumbs/
+  - title: "연도별 포스트"
+    url: /posts/
   - title: "Categories"
     url: /categories/
+  
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
