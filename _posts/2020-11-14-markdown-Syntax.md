@@ -5,10 +5,10 @@ title: "마크다운(markdown) 문법 총정리"
 excerpt: "마크다운 문법을 모아모아봤다."
 
 categories:
- - Markdown
-
+  - Markdown
 tags:
- - Markdown
+  - Markdown
+
 ---
 
 ## 1. 헤더 Headers

@@ -6,6 +6,8 @@ main:
     url: /markdowns/
   - title: "빵 부스러기"
     url: /breadcrumbs/
+  - title: "TIL"
+    url: /tils/
   - title: "연도별 포스트"
     url: /posts/
   - title: "Categories"

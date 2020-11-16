@@ -1,6 +1,7 @@
 ---
-title: "Git"
+title: "TIL"
 layout: category
-permalink: /gits/
+permalink: /tils/
 author_profile: true
+taxonomy: TIL
 ---
