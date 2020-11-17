@@ -364,7 +364,7 @@ __double underscores__ <br>
 ![Alt text](/assets/images/markdown-syntax/smile.png "Optional title")
 ```
 **적용예**:<br>
-![Alt text](/assets/images/markdown-syntax/smile.png) <br>
+![Alt text](/assets/images/markdown-syntax/smile.png)
 ![Alt text](/assets/images/markdown-syntax/smile.png "smile")
 
 사이즈 조절 기능은 없기 때문에 `<img width="" height=""></img>`를 이용한다.
