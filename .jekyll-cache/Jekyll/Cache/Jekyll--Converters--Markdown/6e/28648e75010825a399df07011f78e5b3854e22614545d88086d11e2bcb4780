@@ -1,4 +1,4 @@
-I"�L<h2 id="1-헤더-headers">1. 헤더 Headers</h2>
+I"�L<h2 id="1-헤더-headers">1. 헤더 Headers</h2>
 <ul>
   <li>큰제목: 문서제목</li>
 </ul>
@@ -370,7 +370,7 @@ Link: <span class="p">[</span><span class="nv">Google</span><span class="p">][</
 <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/markdown-syntax/smile.png"</span> <span class="na">width=</span><span class="s">"10%"</span> <span class="na">height=</span><span class="s">"10%"</span> <span class="na">title=</span><span class="s">"px(픽셀) 크기 설정"</span> <span class="na">alt=</span><span class="s">"smile"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
 <p><strong>적용예</strong>:<br />
-<img src="/assets/images/markdown-syntax/smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile" /> <br />
+<img src="/assets/images/markdown-syntax/smile.png" width="50%" height="50%" /> <br />
 <img src="/assets/images/markdown-syntax/smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile" /></p>
 
 <h2 id="9-줄-바꿈">9. 줄 바꿈</h2>

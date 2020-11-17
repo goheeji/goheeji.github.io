@@ -373,7 +373,7 @@ __double underscores__ <br>
 <img src="/assets/images/markdown-syntax/smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile">
 ```
 **적용예**:<br>
-<img src="/assets/images/markdown-syntax/smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile"> <br>
+<img src="/assets/images/markdown-syntax/smile.png" width="50%" height="50%"> <br>
 <img src="/assets/images/markdown-syntax/smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile">
 
 
