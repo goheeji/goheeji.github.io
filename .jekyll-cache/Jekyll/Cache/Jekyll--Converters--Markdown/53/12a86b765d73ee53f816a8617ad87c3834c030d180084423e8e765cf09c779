@@ -1,4 +1,4 @@
-I"�L<h2 id="1-헤더-headers">1. 헤더 Headers</h2>
+I"�L<h2 id="1-헤더-headers">1. 헤더 Headers</h2>
 <ul>
   <li>큰제목: 문서제목</li>
 </ul>
@@ -362,7 +362,7 @@ Link: <span class="p">[</span><span class="nv">Google</span><span class="p">][</
 <span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">/assets/images/markdown-syntax/smile.png</span> <span class="nn">"Optional title"</span><span class="p">)</span>
 </code></pre></div></div>
 <p><strong>적용예</strong>:<br />
-<img src="/assets/images/markdown-syntax/smile.png" alt="Alt text" /> <br />
+<img src="/assets/images/markdown-syntax/smile.png" alt="Alt text2" /> <br />
 <img src="/assets/images/markdown-syntax/smile.png" alt="Alt text" title="smile" /></p>
 
 <p>사이즈 조절 기능은 없기 때문에 <code class="language-plaintext highlighter-rouge">&lt;img width="" height=""&gt;&lt;/img&gt;</code>를 이용한다.</p>
