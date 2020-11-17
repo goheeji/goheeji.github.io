@@ -1,0 +1,13 @@
+I"�<ul class="toc__menu">
+  <li><a href="#1-url-prefix에--블로그-주소-입력하기">1. URL prefix에  블로그 주소 입력하기</a></li>
+  <li><a href="#2-소유권-인증하기">2. 소유권 인증하기</a></li>
+  <li><a href="#3-sitemapxml-robotstxt-생성하기">3. sitemap.xml, robots.txt 생성하기</a>
+    <ul>
+      <li><a href="#31-sitemapxml-생성">3.1 sitemap.xml 생성</a></li>
+      <li><a href="#32-robotstxt-생성">3.2 robots.txt 생성</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-google에-sitemapxml-등록하기">4. Google에 sitemap.xml 등록하기</a></li>
+  <li><a href="#reference">Reference</a></li>
+</ul>
+:ET

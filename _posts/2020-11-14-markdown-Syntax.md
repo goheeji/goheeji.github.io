@@ -360,21 +360,21 @@ __double underscores__ <br>
 ## 8. 이미지
 
 ```markdown
-![Alt text](/path/to/img.jpg)
-![Alt text](/path/to/img.jpg "Optional title")
+![Alt text](/assets/images/markdown-syntax/smile.png)
+![Alt text](/assets/images/markdown-syntax/smile.png "Optional title")
 ```
-**적용예**:
-![Alt text](D:\smile.png)
-![Alt text](D:\smile.png "smile")
+**적용예**:<br>
+![Alt text](/assets/images/markdown-syntax/smile.png) <br>
+![Alt text](/assets/images/markdown-syntax/smile.png "smile")
 
 사이즈 조절 기능은 없기 때문에 `<img width="" height=""></img>`를 이용한다.
 ```markdown
-<img src="D:\smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile"></img>
-<img src="D:\smile.png" width="50%" height="50%" title="px(픽셀) 크기 설정" alt="smile"></img>
+<img src="/assets/images/markdown-syntax/smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile">
+<img src="/assets/images/markdown-syntax/smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile">
 ```
-**적용예**:
-<img src="D:\smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile"></img>
-<img src="D:\smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile"></img>
+**적용예**:<br>
+<img src="/assets/images/markdown-syntax/smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile"> <br>
+<img src="/assets/images/markdown-syntax/smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile">
 
 
 

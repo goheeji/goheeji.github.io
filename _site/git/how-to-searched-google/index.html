@@ -1,0 +1,641 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Blog]구글 검색 가능하게 하기 - 너구리의 기술 블로그</title>
+<meta name="description" content="내 게시글을 구글링되게 해보자">
+
+
+  <meta name="author" content="고희지">
+  
+  <meta property="article:author" content="고희지">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="너구리의 기술 블로그">
+<meta property="og:title" content="[Blog]구글 검색 가능하게 하기">
+<meta property="og:url" content="http://localhost:4000/git/how-to-searched-google/">
+
+
+  <meta property="og:description" content="내 게시글을 구글링되게 해보자">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-17T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/git/how-to-searched-google/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "고희지",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="너구리의 기술 블로그 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          개발하는 너구리
+          <span class="site-subtitle">Version 0.1</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/gits/">Git</a>
+            </li><li class="masthead__menu-item">
+              <a href="/markdowns/">Markdown</a>
+            </li><li class="masthead__menu-item">
+              <a href="/breadcrumbs/">빵 부스러기</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tils/">TIL</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/">연도별 포스트</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile/photo.jpg" alt="고희지" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">고희지</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>너굴너굴</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:email">
+            <meta itemprop="email" content="email" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Blog]구글 검색 가능하게 하기">
+    <meta itemprop="description" content="내 게시글을 구글링되게 해보자">
+    <meta itemprop="datePublished" content="2020-11-17T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Blog]구글 검색 가능하게 하기
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#1-url-prefix에--블로그-주소-입력하기">1. URL prefix에  블로그 주소 입력하기</a></li>
+  <li><a href="#2-소유권-인증하기">2. 소유권 인증하기</a></li>
+  <li><a href="#3-sitemapxml-robotstxt-생성하기">3. sitemap.xml, robots.txt 생성하기</a>
+    <ul>
+      <li><a href="#31-sitemapxml-생성">3.1 sitemap.xml 생성</a></li>
+      <li><a href="#32-robotstxt-생성">3.2 robots.txt 생성</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-google에-sitemapxml-등록하기">4. Google에 sitemap.xml 등록하기</a></li>
+  <li><a href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="1-url-prefix에--블로그-주소-입력하기">1. URL prefix에  블로그 주소 입력하기</h2>
+<p>자신의 블로그 게시글이 구글에서 검색이 가능하게 하고싶다면 <a href="https://search.google.com/search-console/about?hl=ko&amp;utm_source=wmx&amp;utm_medium=wmx-welcome">Google Search Console</a>을 통해 등록을 해야한다. 좌측은 구매한 도메인이 있을때 사용이 가능하며 하나의 도메인 등록을 통해 모든 서브도메인을 통합 관리하는 방식이다. 우측(URL prefix)은 일반적인 GitBlog일때 사용한다.</p>
+
+<p>우리는 우측 URL prefix 방식으로 진행한다.
+URL 입력란에 자신의 깃허브 블로그 주소를 적는다.
+https://goheeji.github.io/</p>
+
+<p><img src="/assets/images/how-to-searched-google/1.png" alt="Alt text" /></p>
+
+<h2 id="2-소유권-인증하기">2. 소유권 인증하기</h2>
+
+<p>이제 블로그 도메인에 대한 소유권 인증을 진행한다. 사이트에 소유권자만이 구글 검색에 대해 허가를 내줄 수 있기 때문이다. 소유권 확인을 위한 html파일을 다운로드 한 후</p>
+
+<p>자신의 github jekyll 블로그 루트 디렉토리에 올리고 push를 한다. push를 했다면 확인버튼을 클릭하여 소유권 인증을 마무리한다.</p>
+
+<h2 id="3-sitemapxml-robotstxt-생성하기">3. sitemap.xml, robots.txt 생성하기</h2>
+<p>아직은 아무 정보가 없어 웹사이트 유입현황이나 정보를 취득하지 못한다. 물론 검색도 안된다. 구글 검색 엔진이 웹사이트를 읽어가는 작업이 진행되어야 검색이 노출되는데 이를 크롤링이라고 한다. 정상적인 크롤링을 위해서는 sitemap.xml과 robots.txt가 필요하다.</p>
+
+<p class="notice--info"><strong>sitemap.xml</strong> <br />
+웹사이트 내 모든 페이지의 목록을 나열한 파일이다. 책의 목차와 같은 역할을한다.
+robots.txt 파일과는 다르게 sitemap.xml 파일은 꼭 루트 디렉토리에 위치하지 않아도된다.
+sitemap.xml은 정해진 양식으로 제작되어야하고, 이 양식은 전세계적으로 약속된 방식이다.</p>
+
+<p class="notice--info"><strong>robots.txt</strong><br />
+검색 엔진 크롤러에서 사이트에서 요청할 수 있는 페이지나 요청할 수 없는 페이지를 설정 및 제어하는 부분이다.
+검색 로봇들에게 웹사이트의 사이트맵이 어디있는지 알려주는 역할이다.
+항상 root 폴더에 위치해 /robots.txt를 입력하면 확인 가능하다.</p>
+
+<h3 id="31-sitemapxml-생성">3.1 sitemap.xml 생성</h3>
+<p>sitemap.xml을 수동으로 작성하기보단 jekyll-sitemap 플러그인을 통해서 관리하는 방법으로 생성한다.</p>
+
+<p>우선 Gemfile에 하단 부분을 적어준다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grm 'jekyll-sitemap'
+</code></pre></div></div>
+<p>이제 cmd창에서  bundle install 명령어를 통해서 플러그인 설치를 진행하고 서버를 시작한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># bundle install
+# jekyll serve
+</code></pre></div></div>
+<p>정상적으로 설치가 되었다면 아래와 같이 접근이 가능하다.
+http://localhost:4000/sitemap.xml
+플러그인이 자동으로 페이지에 있는 모든 정보를 가지고 와서 sitemap을 만들어준다.</p>
+
+<h3 id="32-robotstxt-생성">3.2 robots.txt 생성</h3>
+<p>자신의 github jekyll 블로그 루트 디렉토리에 robots.txt파일을 생성하고 아래의 내용을 작성한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Allow: /
+
+Sitemap: https://goheeji.github.io/sitemap.xml
+</code></pre></div></div>
+
+<p class="notice--info">모든 웹사이트 콘텐츠에 대한 모든 웹 크롤러의 접근을 차단<br /><br />User-agent: *<br />Disallow: /<br /><br />만약 구글 로봇만 차단시키고 싶다면 User-agent에  * 부분을 Googlebot으로 변경하여 설정<br /><br />User-agent: Yeti<br />Disallow: /hello/<br /><br />이렇게 설정하면 웹사이트의 모든 콘텐츠의 네이버 검색로봇의 크롤링을 허용하되, /hello/ 디렉토리 안의 페이지에 대한 접근만 차단한다는 의미이다.</p>
+
+<h2 id="4-google에-sitemapxml-등록하기">4. Google에 sitemap.xml 등록하기</h2>
+<p>우측 상단의 <a href="https://search.google.com/search-console/about?hl=ko&amp;utm_source=wmx&amp;utm_medium=wmx-welcome">Google Search Console</a>페이지 메뉴 중 sitemaps에 들어가서 생성한 sitemap.xml을 제출한다.
+<img src="/assets/images/how-to-searched-google/2.png" width="50%" height="50%" /></p>
+
+<p class="notice--danger"><strong>Please Note:</strong>
+sitemap까지 등록되었다면 검색 노출까지 일주일 정도 기간이 걸린다고 한다.</p>
+
+<h2 id="reference">Reference</h2>
+<p>https://honbabzone.com/jekyll/start-gitHubBlog/</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#gitblog" class="page__taxonomy-item" rel="tag">GitBlog</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#jekyll" class="page__taxonomy-item" rel="tag">jekyll</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#git" class="page__taxonomy-item" rel="tag">Git</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-17T00:00:00+09:00">November 17, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BBlog%5D%EA%B5%AC%EA%B8%80+%EA%B2%80%EC%83%89+%EA%B0%80%EB%8A%A5%ED%95%98%EA%B2%8C+%ED%95%98%EA%B8%B0%20http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fhow-to-searched-google%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fhow-to-searched-google%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fhow-to-searched-google%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/markdown/markdown-Syntax/" class="pagination--pager" title="마크다운(markdown) 문법 총정리
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/markdown/markdown-Syntax/" rel="permalink">마크다운(markdown) 문법 총정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">마크다운 문법을 모아모아봤다.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice/" rel="permalink">Notice
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">블로그를 보다 저건 어떻게 하는거지 싶은 블로그 작성 문법
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 고희지. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

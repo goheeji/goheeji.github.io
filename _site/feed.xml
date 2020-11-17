@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-16T23:45:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>email</email></author><entry><title type="html">Notice</title><link href="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice/" rel="alternate" type="text/html" title="Notice" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice</id><content type="html" xml:base="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice/">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Notice.:**
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-17T21:33:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>email</email></author><entry><title type="html">[Blog]구글 검색 가능하게 하기</title><link href="http://localhost:4000/git/how-to-searched-google/" rel="alternate" type="text/html" title="[Blog]구글 검색 가능하게 하기" /><published>2020-11-17T00:00:00+09:00</published><updated>2020-11-17T00:00:00+09:00</updated><id>http://localhost:4000/git/how-to-searched-google</id><content type="html" xml:base="http://localhost:4000/git/how-to-searched-google/">&lt;h2 id=&quot;1-url-prefix에--블로그-주소-입력하기&quot;&gt;1. URL prefix에  블로그 주소 입력하기&lt;/h2&gt;
+&lt;p&gt;자신의 블로그 게시글이 구글에서 검색이 가능하게 하고싶다면 &lt;a href=&quot;https://search.google.com/search-console/about?hl=ko&amp;amp;utm_source=wmx&amp;amp;utm_medium=wmx-welcome&quot;&gt;Google Search Console&lt;/a&gt;을 통해 등록을 해야한다. 좌측은 구매한 도메인이 있을때 사용이 가능하며 하나의 도메인 등록을 통해 모든 서브도메인을 통합 관리하는 방식이다. 우측(URL prefix)은 일반적인 GitBlog일때 사용한다.&lt;/p&gt;
+
+&lt;p&gt;우리는 우측 URL prefix 방식으로 진행한다.
+URL 입력란에 자신의 깃허브 블로그 주소를 적는다.
+https://goheeji.github.io/&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/how-to-searched-google/1.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-소유권-인증하기&quot;&gt;2. 소유권 인증하기&lt;/h2&gt;
+
+&lt;p&gt;이제 블로그 도메인에 대한 소유권 인증을 진행한다. 사이트에 소유권자만이 구글 검색에 대해 허가를 내줄 수 있기 때문이다. 소유권 확인을 위한 html파일을 다운로드 한 후&lt;/p&gt;
+
+&lt;p&gt;자신의 github jekyll 블로그 루트 디렉토리에 올리고 push를 한다. push를 했다면 확인버튼을 클릭하여 소유권 인증을 마무리한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-sitemapxml-robotstxt-생성하기&quot;&gt;3. sitemap.xml, robots.txt 생성하기&lt;/h2&gt;
+&lt;p&gt;아직은 아무 정보가 없어 웹사이트 유입현황이나 정보를 취득하지 못한다. 물론 검색도 안된다. 구글 검색 엔진이 웹사이트를 읽어가는 작업이 진행되어야 검색이 노출되는데 이를 크롤링이라고 한다. 정상적인 크롤링을 위해서는 sitemap.xml과 robots.txt가 필요하다.&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;sitemap.xml&lt;/strong&gt; &lt;br /&gt;
+웹사이트 내 모든 페이지의 목록을 나열한 파일이다. 책의 목차와 같은 역할을한다.
+robots.txt 파일과는 다르게 sitemap.xml 파일은 꼭 루트 디렉토리에 위치하지 않아도된다.
+sitemap.xml은 정해진 양식으로 제작되어야하고, 이 양식은 전세계적으로 약속된 방식이다.&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;robots.txt&lt;/strong&gt;&lt;br /&gt;
+검색 엔진 크롤러에서 사이트에서 요청할 수 있는 페이지나 요청할 수 없는 페이지를 설정 및 제어하는 부분이다.
+검색 로봇들에게 웹사이트의 사이트맵이 어디있는지 알려주는 역할이다.
+항상 root 폴더에 위치해 /robots.txt를 입력하면 확인 가능하다.&lt;/p&gt;
+
+&lt;h3 id=&quot;31-sitemapxml-생성&quot;&gt;3.1 sitemap.xml 생성&lt;/h3&gt;
+&lt;p&gt;sitemap.xml을 수동으로 작성하기보단 jekyll-sitemap 플러그인을 통해서 관리하는 방법으로 생성한다.&lt;/p&gt;
+
+&lt;p&gt;우선 Gemfile에 하단 부분을 적어준다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grm 'jekyll-sitemap'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이제 cmd창에서  bundle install 명령어를 통해서 플러그인 설치를 진행하고 서버를 시작한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# bundle install
+# jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;정상적으로 설치가 되었다면 아래와 같이 접근이 가능하다.
+http://localhost:4000/sitemap.xml
+플러그인이 자동으로 페이지에 있는 모든 정보를 가지고 와서 sitemap을 만들어준다.&lt;/p&gt;
+
+&lt;h3 id=&quot;32-robotstxt-생성&quot;&gt;3.2 robots.txt 생성&lt;/h3&gt;
+&lt;p&gt;자신의 github jekyll 블로그 루트 디렉토리에 robots.txt파일을 생성하고 아래의 내용을 작성한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;User-agent: *
+Allow: /
+
+Sitemap: https://goheeji.github.io/sitemap.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;모든 웹사이트 콘텐츠에 대한 모든 웹 크롤러의 접근을 차단&lt;br /&gt;&lt;br /&gt;User-agent: *&lt;br /&gt;Disallow: /&lt;br /&gt;&lt;br /&gt;만약 구글 로봇만 차단시키고 싶다면 User-agent에  * 부분을 Googlebot으로 변경하여 설정&lt;br /&gt;&lt;br /&gt;User-agent: Yeti&lt;br /&gt;Disallow: /hello/&lt;br /&gt;&lt;br /&gt;이렇게 설정하면 웹사이트의 모든 콘텐츠의 네이버 검색로봇의 크롤링을 허용하되, /hello/ 디렉토리 안의 페이지에 대한 접근만 차단한다는 의미이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-google에-sitemapxml-등록하기&quot;&gt;4. Google에 sitemap.xml 등록하기&lt;/h2&gt;
+&lt;p&gt;우측 상단의 &lt;a href=&quot;https://search.google.com/search-console/about?hl=ko&amp;amp;utm_source=wmx&amp;amp;utm_medium=wmx-welcome&quot;&gt;Google Search Console&lt;/a&gt;페이지 메뉴 중 sitemaps에 들어가서 생성한 sitemap.xml을 제출한다.
+&lt;img src=&quot;/assets/images/how-to-searched-google/2.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice--danger&quot;&gt;&lt;strong&gt;Please Note:&lt;/strong&gt;
+sitemap까지 등록되었다면 검색 노출까지 일주일 정도 기간이 걸린다고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;https://honbabzone.com/jekyll/start-gitHubBlog/&lt;/p&gt;</content><author><name>고희지</name><email>email</email></author><category term="Git" /><category term="GitBlog" /><category term="jekyll" /><summary type="html">내 게시글을 구글링되게 해보자</summary></entry><entry><title type="html">Notice</title><link href="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice/" rel="alternate" type="text/html" title="Notice" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice</id><content type="html" xml:base="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/Notice/">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Notice.:**
 기본적인 Notice
 {: .notice}
 
@@ -402,20 +465,20 @@ Link: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot
 
 &lt;h2 id=&quot;8-이미지&quot;&gt;8. 이미지&lt;/h2&gt;
 
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/path/to/img.jpg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/path/to/img.jpg&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Optional title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/assets/images/markdown-syntax/smile.png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/assets/images/markdown-syntax/smile.png&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Optional title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
-&lt;img src=&quot;D:\smile.png&quot; alt=&quot;Alt text&quot; /&gt;
-&lt;img src=&quot;D:\smile.png&quot; alt=&quot;Alt text&quot; title=&quot;smile&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;br /&gt;
+&lt;img src=&quot;/assets/images/markdown-syntax/smile.png&quot; alt=&quot;Alt text&quot; /&gt; &lt;br /&gt;
+&lt;img src=&quot;/assets/images/markdown-syntax/smile.png&quot; alt=&quot;Alt text&quot; title=&quot;smile&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;사이즈 조절 기능은 없기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;img width=&quot;&quot; height=&quot;&quot;&amp;gt;&amp;lt;/img&amp;gt;&lt;/code&gt;를 이용한다.&lt;/p&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;D:\smile.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/img&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;D:\smile.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/img&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/markdown-syntax/smile.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/markdown-syntax/smile.png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
-&lt;img src=&quot;D:\smile.png&quot; width=&quot;100px&quot; height=&quot;100px&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt;&amp;lt;/img&amp;gt;
-&lt;img src=&quot;D:\smile.png&quot; width=&quot;10%&quot; height=&quot;10%&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt;&amp;lt;/img&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;br /&gt;
+&lt;img src=&quot;/assets/images/markdown-syntax/smile.png&quot; width=&quot;100px&quot; height=&quot;100px&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt; &lt;br /&gt;
+&lt;img src=&quot;/assets/images/markdown-syntax/smile.png&quot; width=&quot;10%&quot; height=&quot;10%&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;9-줄-바꿈&quot;&gt;9. 줄 바꿈&lt;/h2&gt;
 

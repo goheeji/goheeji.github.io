@@ -9,6 +9,10 @@
 <lastmod>2020-11-14T00:00:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/git/how-to-searched-google/</loc>
+<lastmod>2020-11-17T00:00:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/tils/</loc>
 </url>
 <url>
@@ -28,5 +32,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/posts/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/google2f9734e1fa0b4098.html</loc>
+<lastmod>2020-11-17T18:39:21+09:00</lastmod>
 </url>
 </urlset>

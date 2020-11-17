@@ -22,7 +22,7 @@ subtitle                 : "Version 0.1" #타이틀 아래에 나올 작은 글�
 name                     : "고희지" # 맨 하단 이름 찍히는 영역
 description              : "너굴너굴" # Meta 태그에 들어가는 영역
 url                      : "https://goheeji.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : #"my-baseurl" # the subpath of your site, e.g. "/blog"
 repository               : "goheeji/goheeji.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"

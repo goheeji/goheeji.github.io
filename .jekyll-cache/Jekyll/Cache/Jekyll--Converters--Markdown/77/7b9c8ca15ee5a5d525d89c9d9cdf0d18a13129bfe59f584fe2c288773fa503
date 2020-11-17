@@ -1,4 +1,4 @@
-I"L<h2 id="1-헤더-headers">1. 헤더 Headers</h2>
+I"�L<h2 id="1-헤더-headers">1. 헤더 Headers</h2>
 <ul>
   <li>큰제목: 문서제목</li>
 </ul>
@@ -358,20 +358,20 @@ Link: <span class="p">[</span><span class="nv">Google</span><span class="p">][</
 
 <h2 id="8-이미지">8. 이미지</h2>
 
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">/path/to/img.jpg</span><span class="p">)</span>
-<span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">/path/to/img.jpg</span> <span class="nn">"Optional title"</span><span class="p">)</span>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">/assets/images/markdown-syntax/smile.png</span><span class="p">)</span>
+<span class="p">![</span><span class="nv">Alt text</span><span class="p">](</span><span class="sx">/assets/images/markdown-syntax/smile.png</span> <span class="nn">"Optional title"</span><span class="p">)</span>
 </code></pre></div></div>
-<p><strong>적용예</strong>:
-<img src="D:\smile.png" alt="Alt text" />
-<img src="D:\smile.png" alt="Alt text" title="smile" /></p>
+<p><strong>적용예</strong>:<br />
+<img src="/assets/images/markdown-syntax/smile.png" alt="Alt text" /> <br />
+<img src="/assets/images/markdown-syntax/smile.png" alt="Alt text" title="smile" /></p>
 
 <p>사이즈 조절 기능은 없기 때문에 <code class="language-plaintext highlighter-rouge">&lt;img width="" height=""&gt;&lt;/img&gt;</code>를 이용한다.</p>
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"D:\smile.png"</span> <span class="na">width=</span><span class="s">"100px"</span> <span class="na">height=</span><span class="s">"100px"</span> <span class="na">title=</span><span class="s">"px(픽셀) 크기 설정"</span> <span class="na">alt=</span><span class="s">"smile"</span><span class="nt">&gt;&lt;/img&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"D:\smile.png"</span> <span class="na">width=</span><span class="s">"50%"</span> <span class="na">height=</span><span class="s">"50%"</span> <span class="na">title=</span><span class="s">"px(픽셀) 크기 설정"</span> <span class="na">alt=</span><span class="s">"smile"</span><span class="nt">&gt;&lt;/img&gt;</span>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/markdown-syntax/smile.png"</span> <span class="na">width=</span><span class="s">"100px"</span> <span class="na">height=</span><span class="s">"100px"</span> <span class="na">title=</span><span class="s">"px(픽셀) 크기 설정"</span> <span class="na">alt=</span><span class="s">"smile"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/assets/images/markdown-syntax/smile.png"</span> <span class="na">width=</span><span class="s">"10%"</span> <span class="na">height=</span><span class="s">"10%"</span> <span class="na">title=</span><span class="s">"px(픽셀) 크기 설정"</span> <span class="na">alt=</span><span class="s">"smile"</span><span class="nt">&gt;</span>
 </code></pre></div></div>
-<p><strong>적용예</strong>:
-<img src="D:\smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile" />&lt;/img&gt;
-<img src="D:\smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile" />&lt;/img&gt;</p>
+<p><strong>적용예</strong>:<br />
+<img src="/assets/images/markdown-syntax/smile.png" width="100px" height="100px" title="px(픽셀) 크기 설정" alt="smile" /> <br />
+<img src="/assets/images/markdown-syntax/smile.png" width="10%" height="10%" title="px(픽셀) 크기 설정" alt="smile" /></p>
 
 <h2 id="9-줄-바꿈">9. 줄 바꿈</h2>
 
