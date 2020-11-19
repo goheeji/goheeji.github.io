@@ -1,14 +1,13 @@
 ---
 toc: ture
 toc_sticky: ture
-title: "마크다운(markdown) 문법 총정리"
-excerpt: "마크다운 문법을 모아모아봤다."
+title: "[Markdown]마크다운(markdown) 문법 총정리"
+excerpt: "마크다운 문법을 정복해보자"
 
 categories:
   - Markdown
 tags:
   - Markdown
-
 ---
 
 ## 1. 헤더 Headers

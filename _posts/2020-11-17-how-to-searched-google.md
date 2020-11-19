@@ -1,7 +1,7 @@
 ---
 toc: ture
 toc_sticky: ture
-title: "[Blog]구글 검색 가능하게 하기"
+title: "[Jekyll]내 블로그 구글 검색 가능하게 하기"
 excerpt: "내 게시글을 구글링되게 해보자"
 
 categories:

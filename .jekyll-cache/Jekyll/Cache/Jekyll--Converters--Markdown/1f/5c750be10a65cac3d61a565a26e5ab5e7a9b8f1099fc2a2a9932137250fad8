@@ -1,0 +1,26 @@
+I"<ul class="toc__menu">
+  <li><a href="#gitignore-란">.gitignore 란?</a></li>
+  <li><a href="#gitignore-파일-만들기">.gitignore 파일 만들기</a>
+    <ul>
+      <li><a href="#1-gitignore파일을-만든다">1. .gitignore파일을 만든다.</a></li>
+      <li><a href="#2-적용하기">2. 적용하기</a>
+        <ul>
+          <li><a href="#21-버전관리중인-파일이-없는-상태에서-gitignore을-적용하고-싶은-경우">2.1 .버전관리중인 파일이 없는 상태에서 .gitignore을 적용하고 싶은 경우</a></li>
+          <li><a href="#22-이미-버전관리-중인-파일을-github에서-삭제하고-gitignore을-적용하고-싶은-경우">2.2 이미 버전관리 중인 파일을 Github에서 삭제하고 .gitignore을 적용하고 싶은 경우</a>
+            <ul>
+              <li><a href="#221-현재-repository-캐시-모두-삭제">2.2.1 현재 Repository 캐시 모두 삭제</a></li>
+              <li><a href="#222-gitignore와-함께-push">2.2.2 .gitignore와 함께 push</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#3-성공">3. 성공</a>
+        <ul>
+          <li><a href="#참고사항">참고사항</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#references">references</a></li>
+</ul>
+:ET
