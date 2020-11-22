@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # 테마 색 설정 # "air", "aqua", "contr
 locale                   : "ko-KR"
 title                    : "너구리의 기술 블로그" #Meta 태그에 들어가는 영역, masthead_title등이 없으면 기본 값으로 나온다.
 title_separator          : "-" # 타이틀 사이 구분자 <title>Welcome to Jekyll | Minimal Mistakes</title> 해당 형식으로 들어갑니다.
-subtitle                 : "Version 0.1" #타이틀 아래에 나올 작은 글씨 # site tagline that appears below site title in masthead
+subtitle                 : "기술 블로그" #타이틀 아래에 나올 작은 글씨 # site tagline that appears below site title in masthead
 name                     : "고희지" # 맨 하단 이름 찍히는 영역
 description              : "너굴너굴" # Meta 태그에 들어가는 영역
 url                      : "https://goheeji.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -97,11 +97,11 @@ author:
   avatar           : "/assets/images/profile/photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "너굴너굴"
   location         : "Republic of Korea"
-  email            : "email"
+  email            : "mailto:gmlwl0489@daum.net"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      # url: "mailto:gmlwl0489@daum.net"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -113,7 +113,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/goheeji"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -121,6 +121,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:gmlwl0489@daum.net"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -129,7 +132,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/goheeji"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:

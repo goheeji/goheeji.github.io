@@ -17,7 +17,7 @@ html {
   @include breakpoint($large) {
     font-size: 20px;
   }
-
+  /* 전체 화면일때 폰트 사이즈*/
   @include breakpoint($x-large) {
     font-size: 22px;
   }

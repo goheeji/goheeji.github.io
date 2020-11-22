@@ -1,4 +1,4 @@
-I"�
+I"�
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
@@ -7,7 +7,7 @@
         
         <a class="site-title" href="/">
           개발하는 너구리
-          <span class="site-subtitle">Version 0.1</span>
+          <span class="site-subtitle">기술 블로그</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/gits/">Git</a>
