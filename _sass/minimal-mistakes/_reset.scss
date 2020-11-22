@@ -17,9 +17,9 @@ html {
   @include breakpoint($large) {
     font-size: 20px;
   }
-  /* 전체 화면일때 폰트 사이즈*/
+  /* 전체 화면일때 폰트 사이즈 22px -> 20px*/
   @include breakpoint($x-large) {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   -webkit-text-size-adjust: 100%;
