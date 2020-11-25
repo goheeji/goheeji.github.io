@@ -1,0 +1,802 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Git] Git 취소하기 명령어 모음 - 너구리의 기술 블로그</title>
+<meta name="description" content="add, commit, push 실수를 했을 때, 당황하지말고 이 포스팅을 보자">
+
+
+  <meta name="author" content="고희지">
+  
+  <meta property="article:author" content="고희지">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="너구리의 기술 블로그">
+<meta property="og:title" content="[Git] Git 취소하기 명령어 모음">
+<meta property="og:url" content="http://localhost:4000/git/git-undo-command/">
+
+
+  <meta property="og:description" content="add, commit, push 실수를 했을 때, 당황하지말고 이 포스팅을 보자">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-25T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/git/git-undo-command/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "고희지",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="너구리의 기술 블로그 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          개발하는 너구리
+          <span class="site-subtitle">기술 블로그</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/gits/">Git</a>
+            </li><li class="masthead__menu-item">
+              <a href="/markdowns/">Markdown</a>
+            </li><li class="masthead__menu-item">
+              <a href="/breadcrumbs/">빵 부스러기</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tils/">TIL</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/">연도별 포스트</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile/photo.jpg" alt="고희지" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">고희지</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>너굴너굴</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/goheeji" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:mailto:gmlwl0489@daum.net">
+            <meta itemprop="email" content="mailto:gmlwl0489@daum.net" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Git] Git 취소하기 명령어 모음">
+    <meta itemprop="description" content="add, commit, push 실수를 했을 때, 당황하지말고 이 포스팅을 보자">
+    <meta itemprop="datePublished" content="2020-11-25T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Git] Git 취소하기 명령어 모음
+</h1>
+          <!-- 업데이트 날짜 포함하기-->
+          
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-25T00:00:00+09:00">November 25, 2020</time></p>
+
+
+          <!--
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-25T00:00:00+09:00">November 25, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+-->
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#1-git-add-취소하기">1. git add 취소하기</a></li>
+  <li><a href="#2-git-commit-취소하기">2. git commit 취소하기</a>
+    <ul>
+      <li><a href="#1-우선-commit-목록을-확인한다">1. 우선 commit 목록을 확인한다.</a></li>
+      <li><a href="#2-commit을-취소하는-명령어에는-세가지-종류가-있다">2. commit을 취소하는 명령어에는 세가지 종류가 있다.</a></li>
+      <li><a href="#3-commit-message-변경하기">3. commit message 변경하기</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-git-push-취소하기">3. git push 취소하기</a>
+    <ul>
+      <li><a href="#1-워킹-디렉터리에서-commit을-되돌린다">1. 워킹 디렉터리에서 commit을 되돌린다.</a></li>
+      <li><a href="#2-되돌려진-상태에서-다시-commit을-한다">2. 되돌려진 상태에서 다시 commit을 한다.</a></li>
+      <li><a href="#3-원격-저장소에-강제로-push한다">3. 원격 저장소에 강제로 push한다.</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-untracked-파일-삭제하기">4. untracked 파일 삭제하기</a></li>
+  <li><a href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="1-git-add-취소하기">1. git add 취소하기</h2>
+<p>git add를 취소한다는 말은 git status를 했을때 파일 상태를 unstage로 변경한다는 말과 같다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>“Staging Area” 는 사용자가 git commit 명령을 실행했을 때,
+Git이 처리할 것들이 있는 곳이다.
+</code></pre></div></div>
+<ul>
+  <li>아래와 같이 실수로 <code class="language-plaintext highlighter-rouge">git add .</code> 명령을 사용하여 모든 파일을 Staging Area에 넣은 경우 <code class="language-plaintext highlighter-rouge">git reset HEAD [file]</code> 명령어를 통해 <code class="language-plaintext highlighter-rouge">git add</code> 를 취소할수 있다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="nb">.</span>
+<span class="nv">$ </span>git reset HEAD
+</code></pre></div></div>
+
+<ul>
+  <li>뒤에 파일명이 없으면 add한 파일 전체를 취소한다.</li>
+</ul>
+
+<h2 id="2-git-commit-취소하기">2. git commit 취소하기</h2>
+<p>너무 일찍 commit을 한 경우, 어떤 파일을 뺴먹고 commit을 한경우
+<code class="language-plaintext highlighter-rouge">git reset</code> 명령어 를 통해 git commit을 취소할 수 있다.</p>
+
+<h3 id="1-우선-commit-목록을-확인한다">1. 우선 commit 목록을 확인한다.</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git log
+</code></pre></div></div>
+<h3 id="2-commit을-취소하는-명령어에는-세가지-종류가-있다">2. commit을 취소하는 명령어에는 세가지 종류가 있다.</h3>
+
+<p class="notice--info">HEAD: 현재 브랜치 마지막 커밋의 스냅샷<br />
+Index: 바로 다음에 커밋할 것들<br />
+워킹디렉토리: 샌드박스</p>
+
+<p><a href="https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0">여기</a>를 클릭하면 위의 트리에대한 자세한 설명을 볼 수 있다.</p>
+
+<ul>
+  <li>–soft
+commit을 취소하고 index 보존(add한 상태, staged 상태), 워킹 디렉터리에 보존</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git reset <span class="nt">--soft</span> HEAD^
+</code></pre></div></div>
+<ul>
+  <li>–mixed (기본옵션)
+commit을 취소하고 index 취소(add하기 전 상태, unstaged 상태), 워킹 디렉터리에 보존</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git reset <span class="nt">--mixed</span> HEAD^ //기본 옵션
+<span class="nv">$ </span>git reset HEAD^ //위와 동일
+<span class="nv">$ </span>git reset HEAD~2 //마지막 2개의 commit을 취소
+</code></pre></div></div>
+<ul>
+  <li>–hard 
+commit을 취소하고  index 취소(add하기 전 상태, unstaged 상태), 워킹 디렉터리에서 삭제</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git reset <span class="nt">--hard</span> HEAD^ //워킹 디렉터리를 원격저장소의 마지막 commit 상태로.
+</code></pre></div></div>
+<p class="notice--danger">단, 이 명령을 사용하면 원격 저장소에 있는 마지막 commit 이후 워킹 디렉터리와 add했던 파일들이 모두 사라지므로 주의해야한다.</p>
+
+<h3 id="3-commit-message-변경하기">3. commit message 변경하기</h3>
+<p>commit message를 잘못 적은 경우, <code class="language-plaintext highlighter-rouge">git commit -amend</code> 명령어를 통해 commit message를 변경 할 수 있다.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit <span class="nt">--amend</span>
+</code></pre></div></div>
+
+<h2 id="3-git-push-취소하기">3. git push 취소하기</h2>
+
+<p class="notice--warning">이 명령을 사용하면 자신의 local의 내용을 remote에 강제로 덮어쓰기 하는 것이기 때문에 주의해야한다.<br />
+되돌아간 commit 이후의 모든 commit정보가 사라지기 때문에 주의해야한다.<br />
+특히 협업 프로젝트에서는 동기화 문제가 발생할 수 있으므로 팀원과 상의 후 진행하는것이 좋다.</p>
+
+<h3 id="1-워킹-디렉터리에서-commit을-되돌린다">1. 워킹 디렉터리에서 commit을 되돌린다.</h3>
+<ul>
+  <li>가장 최근의 commit을 취소하고 워킹 디렉터리를 되돌린다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git reset HEAD^
+</code></pre></div></div>
+<ul>
+  <li>Reflog(브랜치와 HEAD가 지난 몇 달동안에 가리켰였던 커밋) 목록 확인</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git reflog 또는 <span class="nv">$ </span>git log <span class="nt">-g</span>
+</code></pre></div></div>
+<ul>
+  <li>원하는 시점으로 워킹 디럭터리를 되돌린다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git reset HEAD@<span class="o">{</span>number<span class="o">}</span> 또는 <span class="nv">$git</span> reset <span class="o">[</span>commit <span class="nb">id</span><span class="o">]</span>
+</code></pre></div></div>
+<h3 id="2-되돌려진-상태에서-다시-commit을-한다">2. 되돌려진 상태에서 다시 commit을 한다.</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"commit message"</span>
+</code></pre></div></div>
+
+<h3 id="3-원격-저장소에-강제로-push한다">3. 원격 저장소에 강제로 push한다.</h3>
+<ul>
+  <li>[방법 1] -f 옵션
+-force 옵션과 동일하다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push origin <span class="o">[</span>branch name] <span class="nt">-f</span>
+</code></pre></div></div>
+<ul>
+  <li>[방법 2] +[branch name]
+해당 branch를 강제로 push한다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push origin +[branch name]
+</code></pre></div></div>
+<h2 id="4-untracked-파일-삭제하기">4. untracked 파일 삭제하기</h2>
+<p>git clean 명령은 추적 중이지 않은 파일만 지우는게 기본동작이다. 즉 .gitignore에 명시하여 무시되는 파일은 지우지 않는다.</p>
+
+<ul>
+  <li>디렉터리를 제외한 파일들만 삭제</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clean <span class="nt">-f</span>
+</code></pre></div></div>
+
+<ul>
+  <li>-d 옵션: 디렉터리까지 지우는 것</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clean <span class="nt">-f</span> <span class="nt">-d</span> //디렉터리까지 삭제
+</code></pre></div></div>
+<ul>
+  <li>-x 옵션: 무시된 파일(.DS_Store나 .gitignore에 등록한 확장자 파일들)까지 모두 지우는 것</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clean <span class="nt">-f</span> <span class="nt">-d</span> <span class="nt">-x</span> //무시된 파일까지 삭제
+</code></pre></div></div>
+<ul>
+  <li>-n 옵션: 가상으로 실행해보고 어떤 파일들이 지워질지 알려주는 것</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clean <span class="nt">-n</span> <span class="nt">-d</span>
+Would remove build.TMP
+Would remove tmp/
+
+<span class="nv">$ </span>git clean <span class="nt">-n</span> <span class="nt">-d</span> <span class="nt">-x</span>
+Would remove build.TMP
+Would remove test.o
+Would remove tmp/
+</code></pre></div></div>
+
+<h2 id="reference">Reference</h2>
+<p>https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#git" class="page__taxonomy-item" rel="tag">Git</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#git" class="page__taxonomy-item" rel="tag">Git</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-25T00:00:00+09:00">November 25, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BGit%5D+Git+%EC%B7%A8%EC%86%8C%ED%95%98%EA%B8%B0+%EB%AA%85%EB%A0%B9%EC%96%B4+%EB%AA%A8%EC%9D%8C%20http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fgit-undo-command%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fgit-undo-command%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fgit%2Fgit-undo-command%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/git/apply-.gitignore-file/" class="pagination--pager" title="[Github].gitignore File 적용하기
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/git/apply-.gitignore-file/" rel="permalink">[Github].gitignore File 적용하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-19T00:00:00+09:00">November 19, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">버전관리에 필요없는 파일들을 무시해보자
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/git/how-to-searched-google/" rel="permalink">[Jekyll]내 블로그 구글 검색 가능하게 하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-17T00:00:00+09:00">November 17, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">내 게시글을 구글링되게 해보자
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/markdown/markdown-Syntax/" rel="permalink">[Markdown]마크다운(markdown) 문법 총정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-14T00:00:00+09:00">November 14, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">마크다운 문법을 정복해보자
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style/" rel="permalink">[Jekyll]Notice 스타일 적용하기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-14T00:00:00+09:00">November 14, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">텍스트 블럭을 예쁘게 장식해보자
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:gmlwl0489@daum.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/goheeji" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 고희지. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

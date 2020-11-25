@@ -22,4 +22,10 @@ var store = [{
         "tags": ["Github"],
         "url": "http://localhost:4000/git/apply-.gitignore-file/",
         "teaser": null
+      },{
+        "title": "[Git] Git 취소하기 명령어 모음",
+        "excerpt":"1. git add 취소하기 git add를 취소한다는 말은 git status를 했을때 파일 상태를 unstage로 변경한다는 말과 같다. “Staging Area” 는 사용자가 git commit 명령을 실행했을 때, Git이 처리할 것들이 있는 곳이다. 아래와 같이 실수로 git add . 명령을 사용하여 모든 파일을 Staging Area에 넣은 경우 git reset HEAD [file] 명령어를...","categories": ["Git"],
+        "tags": ["Git"],
+        "url": "http://localhost:4000/git/git-undo-command/",
+        "teaser": null
       }]

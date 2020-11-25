@@ -1,0 +1,20 @@
+I"�<ul class="toc__menu">
+  <li><a href="#1-git-add-취소하기">1. git add 취소하기</a></li>
+  <li><a href="#2-git-commit-취소하기">2. git commit 취소하기</a>
+    <ul>
+      <li><a href="#1-우선-commit-목록을-확인한다">1. 우선 commit 목록을 확인한다.</a></li>
+      <li><a href="#2-commit을-취소하는-명령어에는-세가지-종류가-있다">2. commit을 취소하는 명령어에는 세가지 종류가 있다.</a></li>
+      <li><a href="#3-commit-message-변경하기">3. commit message 변경하기</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-git-push-취소하기">3. git push 취소하기</a>
+    <ul>
+      <li><a href="#1-워킹-디렉터리에서-commit을-되돌린다">1. 워킹 디렉터리에서 commit을 되돌린다.</a></li>
+      <li><a href="#2-되돌려진-상태에서-다시-commit을-한다">2. 되돌려진 상태에서 다시 commit을 한다.</a></li>
+      <li><a href="#3-원격-저장소에-강제로-push한다">3. 원격 저장소에 강제로 push한다.</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-untracked-파일-삭제하기">4. untracked 파일 삭제하기</a></li>
+  <li><a href="#reference">Reference</a></li>
+</ul>
+:ET
