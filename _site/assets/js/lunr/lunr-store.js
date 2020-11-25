@@ -23,9 +23,21 @@ var store = [{
         "url": "http://localhost:4000/git/apply-.gitignore-file/",
         "teaser": null
       },{
+        "title": "[Java] 함수(Fuction)",
+        "excerpt":"함수란 무엇인가요? 함수 (function) 하나의 기능을 수행하는 일련의 코드 함수는 호출하여 사용하고 기능이 수행된 후 값을 반환 할 수 있음 함수로 구현된 기능은 여러 곳에서 호출되어 사용 될 수 있음 함수를 쓰는 것을 “함수를 호출한다”라고 한다. 이 결과를 나를 호출해준 함수에 돌려준다 라는것은 반환 값을 리턴할 수 있다는 것. 함수(function)의...","categories": ["Java"],
+        "tags": ["java","fuction"],
+        "url": "http://localhost:4000/java/function/",
+        "teaser": null
+      },{
         "title": "[Git] Git 취소하기 명령어 모음",
         "excerpt":"1. git add 취소하기 git add를 취소한다는 말은 git status를 했을때 파일 상태를 unstage로 변경한다는 말과 같다. “Staging Area” 는 사용자가 git commit 명령을 실행했을 때, Git이 처리할 것들이 있는 곳이다. 아래와 같이 실수로 git add . 명령을 사용하여 모든 파일을 Staging Area에 넣은 경우 git reset HEAD [file] 명령어를...","categories": ["Git"],
         "tags": ["Git"],
         "url": "http://localhost:4000/git/git-undo-command/",
+        "teaser": null
+      },{
+        "title": "[Java] 메서드(Method)",
+        "excerpt":"메서드(method)란? 객체의 기능을 구현하기 위해 클래스 내부에 구현되는 함수 메서드를 구현함으로써 객체의 기능이 구현 됨 메서드의 이름은 사용하는 쪽(클라이언트 코드)에 맞게 명명하는 것이 좋음 예) getStudentName() cf) 클래스 이름은 대문자 패키지이름은 소문자 변수와 메서드 이름은 camelNotaion이 좋다. 스택 메모리(Stack Memory) 함수 호출시 사용되는 메모리 종류 아래의 코드를 보며 스택 메모리의...","categories": ["Java"],
+        "tags": ["java","method"],
+        "url": "http://localhost:4000/java/method/",
         "teaser": null
       }]

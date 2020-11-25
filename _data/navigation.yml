@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Java"
+    url: /javas/
   - title: "Git"
     url: /gits/
   - title: "Markdown"
