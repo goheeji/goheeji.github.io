@@ -1,0 +1,133 @@
+I"-<h2 id="인스턴스">인스턴스</h2>
+<ul>
+  <li>클래스로부터 생성된 객체 힙 메모리에 멤버 변수의 크기에 따라 메모리가 생성.
+클래스를 기반으로 new키워드를 이용하여 여러개의 인스턴스를 생성한다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">classpart</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StudentTest</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+		<span class="nc">Student</span> <span class="n">studentLee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+		<span class="n">studentLee</span><span class="o">.</span><span class="na">studentName</span> <span class="o">=</span> <span class="s">"이순신"</span><span class="o">;</span>
+		<span class="n">studentLee</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="s">"서울"</span><span class="o">;</span>
+
+		<span class="n">studentLee</span><span class="o">.</span><span class="na">showStudentInfo</span><span class="o">();</span>
+
+		<span class="nc">Student</span> <span class="n">studentKim</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+		<span class="n">studentKim</span><span class="o">.</span><span class="na">studentName</span> <span class="o">=</span> <span class="s">"김유신"</span><span class="o">;</span>
+		<span class="n">studentKim</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="s">"경주"</span><span class="o">;</span>
+
+		<span class="n">studentKim</span><span class="o">.</span><span class="na">showStudentInfo</span><span class="o">();</span>
+
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+<p>어떤 변수이름으로 객체를 생성하게되면 힙(Heap)이라는 메모리에 그 객체가 생성이된다. 객체가 가지는 멤버변수의 사이즈만큼 메모리가 잡힌다. 
+이것들을 인스턴스라고한다. 인스턴스들은 각각의 멤버값을 갖게된다.</p>
+
+<p><img src="/assets/images/java/Instance&amp;HeapMemory/1.png" /><br /><br /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">classpart</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kt">int</span> <span class="n">studentID</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="nc">String</span> <span class="n">studentName</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">showStudentInfo</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">studentName</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">address</span><span class="o">);</span>
+
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getStudentName</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">studentName</span><span class="o">;</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+<p>위의 Student클래스에서 studentID, studentName, address들은 클래스에서 전반적으로 쓰는 멤버변수이다. 
+멤버변수의 생성시기?  new했을때 
+생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.
+힙(Heap)은 동적메모리라고한다.</p>
+
+<p><img src="/assets/images/java/Instance&amp;HeapMemory/2.png" width="50%" height="50%" /><br /><br />
+<code class="language-plaintext highlighter-rouge">StudentLee</code>라는 값은 스택메모리에 어드레스 사이즈 만큼 생긴다.</p>
+
+<p>힙(Heap)에  studentID, studentName, address가생기고
+스택이 가르키는 값이 힙메모리의 주소값이다.</p>
+
+<p><img src="/assets/images/java/Instance&amp;HeapMemory/3.png" width="50%" height="50%" /><br /><br />
+<code class="language-plaintext highlighter-rouge">StudentLee.</code> 했을때 이 주소가 가르키는 그 위치(힙)에있는 멤버변수들을 의미한다. 멤버변수값은 힙(Heap) Area에있다.</p>
+
+<p><img src="/assets/images/java/Instance&amp;HeapMemory/4.png" width="50%" height="50%" /><br /><br />
+마찬가지로 <code class="language-plaintext highlighter-rouge">StudentKim</code>에 대해서도 같다.
+힙(Heap) Area에 있는객체들을 인스턴스라고한다.
+각각의 인스턴스는 별개의 메모리를 갖는다.</p>
+
+<p>Heap메모리에 잡힌 값이 사라지는 시기
+가비지콜렉터(GC)라는 스레드가 쓰지않는 메모리를 수거하는 역할을한다. 
+적절한 타이밍에 한번씩 돌면서 더이상 참조되지 않는 메모리들은 가비지콜렉터가 알아서 수거한다. 따라서 메모리 free 할 일이 없다.</p>
+
+<h2 id="참조변수와-참조값">참조변수와 참조값</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Student</span> <span class="n">studentLee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">studentLee</span><span class="o">);</span> <span class="c1">//참조변수를 출력</span>
+
+</code></pre></div></div>
+<p>참조변수를 직접출력해보자.
+참조변수에 대한 값을 출력하게되면 출력되는 값의 기본형은</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>클래스의 풀네임@주소값
+</code></pre></div></div>
+<p>클래스의 풀네임은 패키지의 네임이 모두 포함된 클래스의 네임이고, 주소값은 힙의 주소를 가리키는 주소값이다. 실제는 아니고 가상 JVM이주는 해시코드값이다. 16진수로 32비트를 나타낸다.</p>
+
+<p>이것을 참조값이라고 한다.</p>
+
+<h2 id="용어정리">용어정리</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>용어</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>객체</td>
+      <td>객체 지향 프로그램의 대상, 생성된 인스턴스</td>
+    </tr>
+    <tr>
+      <td>클래스</td>
+      <td>객체를 프로그래밍하기 위해 코드로 만든 상태 (코드의 상태)</td>
+    </tr>
+    <tr>
+      <td>인스턴스</td>
+      <td>클래스가 메모리에 생성된 상태</td>
+    </tr>
+    <tr>
+      <td>멤버변수</td>
+      <td>클래스의 속성, 특성</td>
+    </tr>
+    <tr>
+      <td>메서드</td>
+      <td>멤버 변수를 이용하여 클래스의 기능을 구현</td>
+    </tr>
+    <tr>
+      <td>참조 변수</td>
+      <td>메모리에 생성된 인스턴스를 가리키는 변수</td>
+    </tr>
+    <tr>
+      <td>참조값</td>
+      <td>생성된 인스턴스의 메모리 주소 값</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-01T22:22:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)</title><link href="http://localhost:4000/java/constructor&constructorOverroding/" rel="alternate" type="text/html" title="[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/constructor&amp;constructorOverroding</id><content type="html" xml:base="http://localhost:4000/java/constructor&amp;constructorOverroding/">&lt;h2 id=&quot;생성자constructor&quot;&gt;생성자(constructor)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-01T22:38:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)</title><link href="http://localhost:4000/java/constructor&constructorOverroding/" rel="alternate" type="text/html" title="[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/constructor&amp;constructorOverroding</id><content type="html" xml:base="http://localhost:4000/java/constructor&amp;constructorOverroding/">&lt;h2 id=&quot;생성자constructor&quot;&gt;생성자(constructor)&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;객체를 생성할 때 new 키워드와 함께 호출(&lt;strong&gt;객체 생성 외에는 호출할 수 없음&lt;/strong&gt;)&lt;/li&gt;
   &lt;li&gt;인스턴스를 &lt;strong&gt;초기화&lt;/strong&gt; 하는 코드가 구현됨(주로 멤버 변수 &lt;strong&gt;초기화&lt;/strong&gt;)&lt;/li&gt;
@@ -72,9 +72,8 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;참조-자료형-직접-만들어-사용하기&quot;&gt;참조 자료형 직접 만들어 사용하기&lt;/h2&gt;
-&lt;p&gt;학생클래스(Student)에 있는 과목 이름, 과목 성적 속성을 과목 클래스(Subject)로 분리하고 Subject 참조 자료형 멤버 변수를 Student에 정의하여 사용한다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/referenceDataType/1.PNG&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;학생클래스(Student)에 있는 과목 이름, 과목 성적 속성을 과목 클래스(Subject)로 분리하고 Subject 참조 자료형 멤버 변수를 Student에 정의하여 사용한다.
+&lt;img src=&quot;/assets/images/java/referenceDataType/1.PNG&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 	
@@ -169,7 +168,7 @@ public class Subject {
 &lt;p&gt;어떤 변수이름으로 객체를 생성하게되면 힙(Heap)이라는 메모리에 그 객체가 생성이된다. 객체가 가지는 멤버변수의 사이즈만큼 메모리가 잡힌다. 
 이것들을 인스턴스라고한다. 인스턴스들은 각각의 멤버값을 갖게된다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/1.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/Instance&amp;amp;HeapMemory/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;classpart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
 
@@ -196,16 +195,16 @@ public class Subject {
 생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.
 힙(Heap)은 동적메모리라고한다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/2.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/Instance&amp;amp;HeapMemory/2.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StudentLee&lt;/code&gt;라는 값은 스택메모리에 어드레스 사이즈 만큼 생긴다.&lt;/p&gt;
 
 &lt;p&gt;힙(Heap)에  studentID, studentName, address가생기고
 스택이 가르키는 값이 힙메모리의 주소값이다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/3.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/Instance&amp;amp;HeapMemory/3.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StudentLee.&lt;/code&gt; 했을때 이 주소가 가르키는 그 위치(힙)에있는 멤버변수들을 의미한다. 멤버변수값은 힙(Heap) Area에있다.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/4.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/Instance&amp;amp;HeapMemory/4.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 마찬가지로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StudentKim&lt;/code&gt;에 대해서도 같다.
 힙(Heap) Area에 있는객체들을 인스턴스라고한다.
 각각의 인스턴스는 별개의 메모리를 갖는다.&lt;/p&gt;
