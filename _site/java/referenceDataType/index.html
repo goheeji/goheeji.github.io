@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Java - 너구리의 기술 블로그</title>
-<meta name="description" content="너굴너굴">
+<!-- begin _includes/seo.html --><title>[Java] 참조 자료형(Reference Data Type) - 너구리의 기술 블로그</title>
+<meta name="description" content="참조 자료형에대해 알아보자">
 
 
   <meta name="author" content="고희지">
   
+  <meta property="article:author" content="고희지">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="너구리의 기술 블로그">
-<meta property="og:title" content="Java">
-<meta property="og:url" content="http://localhost:4000/javas/">
+<meta property="og:title" content="[Java] 참조 자료형(Reference Data Type)">
+<meta property="og:url" content="http://localhost:4000/java/referenceDataType/">
 
 
-  <meta property="og:description" content="너굴너굴">
-
-
-
+  <meta property="og:description" content="참조 자료형에대해 알아보자">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2020-12-01T00:00:00+09:00">
 
 
 
@@ -41,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/javas/">
+<link rel="canonical" href="http://localhost:4000/java/referenceDataType/">
 
 
 
@@ -103,7 +107,7 @@
 
   </head>
 
-  <body class="layout--category">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -286,29 +290,23 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Java] 참조 자료형(Reference Data Type)">
+    <meta itemprop="description" content="참조 자료형에대해 알아보자">
+    <meta itemprop="datePublished" content="2020-12-01T00:00:00+09:00">
     
-      <h1 id="page-title" class="page__title">Java</h1>
-    
-    
 
-
-
-<div class="entries-list">
-  
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/java/referenceDataType/" rel="permalink">[Java] 참조 자료형(Reference Data Type)
-</a>
-      
-    </h2>
-    
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Java] 참조 자료형(Reference Data Type)
+</h1>
+          <!-- 업데이트 날짜 포함하기-->
+          
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-12-01T00:00:00+09:00">December 1, 2020</time></p>
+
+
+          <!--
 
   <p class="page__meta">
     
@@ -324,16 +322,207 @@
     
   </p>
 
+-->
 
-    <p class="archive__item-excerpt" itemprop="description">참조 자료형에대해 알아보자
-</p>
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#참조-자료형reference-data-type">참조 자료형(reference data type)</a></li>
+  <li><a href="#참조-자료형-직접-만들어-사용하기">참조 자료형 직접 만들어 사용하기</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="참조-자료형reference-data-type">참조 자료형(reference data type)</h2>
+
+<ul>
+  <li>변수의 자료형
+    <ul>
+      <li>기본자료형: int, long, float, double</li>
+      <li>참조 자료형: String, Date, Student 등</li>
+    </ul>
+  </li>
+</ul>
+
+<p>변수는 크게 두가지 자료형으로 나눌수있다. 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조 자료형은 클래스에 따라 다르다.</p>
+
+<ul>
+  <li>클래스형으로 변수를 선언한다</li>
+  <li>대표예) String name;</li>
+</ul>
+
+<h2 id="참조-자료형-직접-만들어-사용하기">참조 자료형 직접 만들어 사용하기</h2>
+<p>학생클래스(Student)에 있는 과목 이름, 과목 성적 속성을 과목 클래스(Subject)로 분리하고 Subject 참조 자료형 멤버 변수를 Student에 정의하여 사용한다.</p>
+
+<p><img src="https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/referenceDataType/1.PNG" alt="Alt text" /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+	
+	<span class="kt">int</span> <span class="n">studentID</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">studentName</span><span class="o">;</span>
+	
+	<span class="kt">int</span> <span class="n">koreanScore</span><span class="o">;</span>
+	<span class="kt">int</span> <span class="n">mathScore</span><span class="o">;</span>
+	<span class="kt">int</span> <span class="n">engScore</span><span class="o">;</span>
+	
+	<span class="nc">String</span> <span class="n">koreanName</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">mathName</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">engName</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위의 코드는 클래스의 성격상 좋은방법이아니다. 학생클래스인데 과목얘기가 더많이 있기 때문이다. Student클래스에서 Subject에 대한 속성은 Subject클래스를 만들자.</p>
+
+<p>```java Student.java
+package reference;</p>
+
+<p>public class Student {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int studentID;
+String studentName;
+
+Subject korea;
+Subject math; // 참조자료형 타입으로 변수를 선언하고
+
+public Student(int id, String name) {
+	studentID = id;
+	studentName = name;
+
+	korea = new Subject();
+	math = new Subject(); // 이 변수를 생성자에서 초기화를했다. 코리아와 메스가 생성이된것이다.
+}
+
+public void setKoreaSubject(String name, int score) {
+	korea.score = score;
+	korea.subjectName = name;
+
+}
+
+public void setMathSubject(String name, int score) {
+	math.subjectName = name;
+	math.score = score;
+}
+</code></pre></div></div>
+
+<p>}</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+```java Subject.java
+package reference;
+
+public class Subject {
+
+	String subjectName;
+	int score;
+	int subjectID;
+
+}
+
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#java" class="page__taxonomy-item" rel="tag">java</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#reference-data-type" class="page__taxonomy-item" rel="tag">reference data type</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#java" class="page__taxonomy-item" rel="tag">Java</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-12-01T00:00:00+09:00">December 1, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BJava%5D+%EC%B0%B8%EC%A1%B0+%EC%9E%90%EB%A3%8C%ED%98%95%28Reference+Data+Type%29%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2FreferenceDataType%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjava%2FreferenceDataType%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjava%2FreferenceDataType%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/java/constructor&constructorOverroding/" class="pagination--pager" title="[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
 
 
 
-
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -364,10 +553,12 @@
   </article>
 </div>
 
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -398,10 +589,12 @@
   </article>
 </div>
 
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -432,15 +625,17 @@
   </article>
 </div>
 
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/java/function/" rel="permalink">[Java] 함수(Fuction)
+        <a href="/git/git-undo-command/" rel="permalink">[Git] Git 취소하기 명령어 모음
 </a>
       
     </h2>
@@ -451,7 +646,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2020-11-22T00:00:00+09:00">November 22, 2020</time>
+        <time datetime="2020-11-23T00:00:00+09:00">November 23, 2020</time>
       </span>
     
 
@@ -461,15 +656,18 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">함수의 기본을 다져보자
+    <p class="archive__item-excerpt" itemprop="description">add, commit, push 실수를 했을 때, 당황하지말고 이 포스팅을 보자
 </p>
   </article>
 </div>
 
+        
+      </div>
+    </div>
+  
+  
 </div>
 
-  </div>
-</div>
     </div>
 
     

@@ -1,0 +1,87 @@
+I"�<h2 id="참조-자료형reference-data-type">참조 자료형(reference data type)</h2>
+
+<ul>
+  <li>변수의 자료형
+    <ul>
+      <li>기본자료형: int, long, float, double</li>
+      <li>참조 자료형: String, Date, Student 등</li>
+    </ul>
+  </li>
+</ul>
+
+<p>변수는 크게 두가지 자료형으로 나눌수있다. 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조 자료형은 클래스에 따라 다르다.</p>
+
+<ul>
+  <li>클래스형으로 변수를 선언한다</li>
+  <li>대표예) String name;</li>
+</ul>
+
+<h2 id="참조-자료형-직접-만들어-사용하기">참조 자료형 직접 만들어 사용하기</h2>
+<p>학생클래스(Student)에 있는 과목 이름, 과목 성적 속성을 과목 클래스(Subject)로 분리하고 Subject 참조 자료형 멤버 변수를 Student에 정의하여 사용한다.</p>
+
+<p><img src="https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/referenceDataType/1.PNG" alt="Alt text" /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+	
+	<span class="kt">int</span> <span class="n">studentID</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">studentName</span><span class="o">;</span>
+	
+	<span class="kt">int</span> <span class="n">koreanScore</span><span class="o">;</span>
+	<span class="kt">int</span> <span class="n">mathScore</span><span class="o">;</span>
+	<span class="kt">int</span> <span class="n">engScore</span><span class="o">;</span>
+	
+	<span class="nc">String</span> <span class="n">koreanName</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">mathName</span><span class="o">;</span>
+	<span class="nc">String</span> <span class="n">engName</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>위의 코드는 클래스의 성격상 좋은방법이아니다. 학생클래스인데 과목얘기가 더많이 있기 때문이다. Student클래스에서 Subject에 대한 속성은 Subject클래스를 만들자.</p>
+
+<p>```java Student.java
+package reference;</p>
+
+<p>public class Student {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int studentID;
+String studentName;
+
+Subject korea;
+Subject math; // 참조자료형 타입으로 변수를 선언하고
+
+public Student(int id, String name) {
+	studentID = id;
+	studentName = name;
+
+	korea = new Subject();
+	math = new Subject(); // 이 변수를 생성자에서 초기화를했다. 코리아와 메스가 생성이된것이다.
+}
+
+public void setKoreaSubject(String name, int score) {
+	korea.score = score;
+	korea.subjectName = name;
+
+}
+
+public void setMathSubject(String name, int score) {
+	math.subjectName = name;
+	math.score = score;
+}
+</code></pre></div></div>
+
+<p>}</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+```java Subject.java
+package reference;
+
+public class Subject {
+
+	String subjectName;
+	int score;
+	int subjectID;
+
+}
+
+</code></pre></div></div>
+
+:ET

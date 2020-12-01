@@ -1,0 +1,782 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Java] 인스턴스(Instance)와 힙메모리(HeapMemory) - 너구리의 기술 블로그</title>
+<meta name="description" content="인스턴스와 힙메모리에 대해서 알아보자">
+
+
+  <meta name="author" content="고희지">
+  
+  <meta property="article:author" content="고희지">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="너구리의 기술 블로그">
+<meta property="og:title" content="[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)">
+<meta property="og:url" content="http://localhost:4000/java/Instance&HeapMemory/">
+
+
+  <meta property="og:description" content="인스턴스와 힙메모리에 대해서 알아보자">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-11-30T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/java/Instance&HeapMemory/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "고희지",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="너구리의 기술 블로그 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          개발하는 너구리
+          <span class="site-subtitle">기술 블로그</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/javas/">Java</a>
+            </li><li class="masthead__menu-item">
+              <a href="/gits/">Git</a>
+            </li><li class="masthead__menu-item">
+              <a href="/markdowns/">Markdown</a>
+            </li><li class="masthead__menu-item">
+              <a href="/breadcrumbs/">빵 부스러기</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tils/">TIL</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/">연도별 포스트</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/profile/photo.jpg" alt="고희지" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">고희지</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>너굴너굴</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/goheeji" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:mailto:gmlwl0489@daum.net">
+            <meta itemprop="email" content="mailto:gmlwl0489@daum.net" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)">
+    <meta itemprop="description" content="인스턴스와 힙메모리에 대해서 알아보자">
+    <meta itemprop="datePublished" content="2020-11-30T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)
+</h1>
+          <!-- 업데이트 날짜 포함하기-->
+          
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-30T00:00:00+09:00">November 30, 2020</time></p>
+
+
+          <!--
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-30T00:00:00+09:00">November 30, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+-->
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#인스턴스">인스턴스</a></li>
+  <li><a href="#참조변수와-참조값">참조변수와 참조값</a></li>
+  <li><a href="#용어정리">용어정리</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="인스턴스">인스턴스</h2>
+<ul>
+  <li>클래스로부터 생성된 객체 힙 메모리에 멤버 변수의 크기에 따라 메모리가 생성.
+클래스를 기반으로 new키워드를 이용하여 여러개의 인스턴스를 생성한다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">classpart</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StudentTest</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+		<span class="nc">Student</span> <span class="n">studentLee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+		<span class="n">studentLee</span><span class="o">.</span><span class="na">studentName</span> <span class="o">=</span> <span class="s">"이순신"</span><span class="o">;</span>
+		<span class="n">studentLee</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="s">"서울"</span><span class="o">;</span>
+
+		<span class="n">studentLee</span><span class="o">.</span><span class="na">showStudentInfo</span><span class="o">();</span>
+
+		<span class="nc">Student</span> <span class="n">studentKim</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+		<span class="n">studentKim</span><span class="o">.</span><span class="na">studentName</span> <span class="o">=</span> <span class="s">"김유신"</span><span class="o">;</span>
+		<span class="n">studentKim</span><span class="o">.</span><span class="na">address</span> <span class="o">=</span> <span class="s">"경주"</span><span class="o">;</span>
+
+		<span class="n">studentKim</span><span class="o">.</span><span class="na">showStudentInfo</span><span class="o">();</span>
+
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+<p>어떤 변수이름으로 객체를 생성하게되면 힙(Heap)이라는 메모리에 그 객체가 생성이된다. 객체가 가지는 멤버변수의 사이즈만큼 메모리가 잡힌다. 
+이것들을 인스턴스라고한다. 인스턴스들은 각각의 멤버값을 갖게된다.</p>
+
+<p><img src="https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;HeapMemory/1.png" alt="Alt text" /></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">classpart</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kt">int</span> <span class="n">studentID</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="nc">String</span> <span class="n">studentName</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="nc">String</span> <span class="n">address</span><span class="o">;</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">showStudentInfo</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">studentName</span> <span class="o">+</span> <span class="s">", "</span> <span class="o">+</span> <span class="n">address</span><span class="o">);</span>
+
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getStudentName</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">studentName</span><span class="o">;</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+<p>위의 Student클래스에서 studentID, studentName, address들은 클래스에서 전반적으로 쓰는 멤버변수이다. 
+멤버변수의 생성시기?  new했을때 
+생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.
+힙(Heap)은 동적메모리라고한다.</p>
+
+<p><img src="https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;HeapMemory/2.png" alt="Alt text" />
+<code class="language-plaintext highlighter-rouge">StudentLee</code>라는 값은 스택메모리에 어드레스 사이즈 만큼 생긴다.</p>
+
+<p>힙(Heap)에  studentID, studentName, address가생기고
+스택이 가르키는 값이 힙메모리의 주소값이다.</p>
+
+<p><img src="https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;HeapMemory/3.png" alt="Alt text" />
+<code class="language-plaintext highlighter-rouge">StudentLee.</code> 했을때 이 주소가 가르키는 그 위치(힙)에있는 멤버변수들을 의미한다. 멤버변수값은 힙(Heap) Area에있다.</p>
+
+<p><img src="https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;HeapMemory/4.png" alt="Alt text" />
+마찬가지로 <code class="language-plaintext highlighter-rouge">StudentKim</code>에 대해서도 같다.
+힙(Heap) Area에 있는객체들을 인스턴스라고한다.
+각각의 인스턴스는 별개의 메모리를 갖는다.</p>
+
+<p>Heap메모리에 잡힌 값이 사라지는 시기
+가비지콜렉터(GC)라는 스레드가 쓰지않는 메모리를 수거하는 역할을한다. 
+적절한 타이밍에 한번씩 돌면서 더이상 참조되지 않는 메모리들은 가비지콜렉터가 알아서 수거한다. 따라서 메모리 free 할 일이 없다.</p>
+
+<h2 id="참조변수와-참조값">참조변수와 참조값</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Student</span> <span class="n">studentLee</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Student</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">studentLee</span><span class="o">);</span> <span class="c1">//참조변수를 출력</span>
+
+</code></pre></div></div>
+<p>참조변수를 직접출력해보자.
+참조변수에 대한 값을 출력하게되면 출력되는 값의 기본형은</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>클래스의 풀네임@주소값
+</code></pre></div></div>
+<p>클래스의 풀네임은 패키지의 네임이 모두 포함된 클래스의 네임이고, 주소값은 힙의 주소를 가리키는 주소값이다. 실제는 아니고 가상 JVM이주는 해시코드값이다. 16진수로 32비트를 나타낸다.</p>
+
+<p>이것을 참조값이라고 한다.</p>
+
+<h2 id="용어정리">용어정리</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>용어</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>객체</td>
+      <td>객체 지향 프로그램의 대상, 생성된 인스턴스</td>
+    </tr>
+    <tr>
+      <td>클래스</td>
+      <td>객체를 프로그래밍하기 위해 코드로 만든 상태 (코드의 상태)</td>
+    </tr>
+    <tr>
+      <td>인스턴스</td>
+      <td>클래스가 메모리에 생성된 상태</td>
+    </tr>
+    <tr>
+      <td>멤버변수</td>
+      <td>클래스의 속성, 특성</td>
+    </tr>
+    <tr>
+      <td>메서드</td>
+      <td>멤버 변수를 이용하여 클래스의 기능을 구현</td>
+    </tr>
+    <tr>
+      <td>참조 변수</td>
+      <td>메모리에 생성된 인스턴스를 가리키는 변수</td>
+    </tr>
+    <tr>
+      <td>참조값</td>
+      <td>생성된 인스턴스의 메모리 주소 값</td>
+    </tr>
+  </tbody>
+</table>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#heapmemory" class="page__taxonomy-item" rel="tag">HeapMemory</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#instance" class="page__taxonomy-item" rel="tag">instance</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#java" class="page__taxonomy-item" rel="tag">java</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#java" class="page__taxonomy-item" rel="tag">Java</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-11-30T00:00:00+09:00">November 30, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BJava%5D+%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%28Instance%29%EC%99%80+%ED%9E%99%EB%A9%94%EB%AA%A8%EB%A6%AC%28HeapMemory%29%20http%3A%2F%2Flocalhost%3A4000%2Fjava%2FInstance%26HeapMemory%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fjava%2FInstance%26HeapMemory%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fjava%2FInstance%26HeapMemory%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/java/method/" class="pagination--pager" title="[Java] 메서드(Method)
+">이전</a>
+    
+    
+      <a href="/java/constructor&constructorOverroding/" class="pagination--pager" title="[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/referenceDataType/" rel="permalink">[Java] 참조 자료형(Reference Data Type)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-12-01T00:00:00+09:00">December 1, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">참조 자료형에대해 알아보자
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/constructor&constructorOverroding/" rel="permalink">[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-12-01T00:00:00+09:00">December 1, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">생성자와 생성자 오버로딩에 대해서 알아보자
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/java/method/" rel="permalink">[Java] 메서드(Method)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-25T00:00:00+09:00">November 25, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">메서드의 기본을 다져보자
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/git/git-undo-command/" rel="permalink">[Git] Git 취소하기 명령어 모음
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2020-11-23T00:00:00+09:00">November 23, 2020</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">add, commit, push 실수를 했을 때, 당황하지말고 이 포스팅을 보자
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:gmlwl0489@daum.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/goheeji" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 고희지. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

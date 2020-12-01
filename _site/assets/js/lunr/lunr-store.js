@@ -40,4 +40,22 @@ var store = [{
         "tags": ["java","method"],
         "url": "http://localhost:4000/java/method/",
         "teaser": null
+      },{
+        "title": "[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)",
+        "excerpt":"인스턴스 클래스로부터 생성된 객체 힙 메모리에 멤버 변수의 크기에 따라 메모리가 생성. 클래스를 기반으로 new키워드를 이용하여 여러개의 인스턴스를 생성한다. package classpart; public class StudentTest { public static void main(String[] args) { Student studentLee = new Student(); studentLee.studentName = \"이순신\"; studentLee.address = \"서울\"; studentLee.showStudentInfo(); Student studentKim = new Student(); studentKim.studentName =...","categories": ["Java"],
+        "tags": ["java","instance","HeapMemory"],
+        "url": "http://localhost:4000/java/Instance&HeapMemory/",
+        "teaser": null
+      },{
+        "title": "[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)",
+        "excerpt":"생성자(constructor) 객체를 생성할 때 new 키워드와 함께 호출(객체 생성 외에는 호출할 수 없음) 인스턴스를 초기화 하는 코드가 구현됨(주로 멤버 변수 초기화) 반환 값이 없음, 상속되지 않음 생성자는 클래스 이름과 동일 사실 우리는 생성자를 사용했었다. 아래의 코드를보자. Student studentLee = new Student(); 이것은 기본생성자라고 한다. 기본 생성자(default constructor) 하나의 클래스에는 반드시...","categories": ["Java"],
+        "tags": ["java","constructor","overroding"],
+        "url": "http://localhost:4000/java/constructor&constructorOverroding/",
+        "teaser": null
+      },{
+        "title": "[Java] 참조 자료형(Reference Data Type)",
+        "excerpt":"참조 자료형(reference data type) 변수의 자료형 기본자료형: int, long, float, double 참조 자료형: String, Date, Student 등 변수는 크게 두가지 자료형으로 나눌수있다. 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조 자료형은 클래스에 따라 다르다. 클래스형으로 변수를 선언한다 대표예) String name; 참조 자료형 직접 만들어 사용하기 학생클래스(Student)에 있는 과목 이름, 과목 성적...","categories": ["Java"],
+        "tags": ["java","reference data type"],
+        "url": "http://localhost:4000/java/referenceDataType/",
+        "teaser": null
       }]

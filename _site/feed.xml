@@ -1,4 +1,273 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-25T21:57:49+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] 메서드(Method)</title><link href="http://localhost:4000/java/method/" rel="alternate" type="text/html" title="[Java] 메서드(Method)" /><published>2020-11-25T00:00:00+09:00</published><updated>2020-11-25T00:00:00+09:00</updated><id>http://localhost:4000/java/method</id><content type="html" xml:base="http://localhost:4000/java/method/">&lt;h2 id=&quot;메서드method란&quot;&gt;메서드(method)란?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-01T22:22:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)</title><link href="http://localhost:4000/java/constructor&constructorOverroding/" rel="alternate" type="text/html" title="[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/constructor&amp;constructorOverroding</id><content type="html" xml:base="http://localhost:4000/java/constructor&amp;constructorOverroding/">&lt;h2 id=&quot;생성자constructor&quot;&gt;생성자(constructor)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;객체를 생성할 때 new 키워드와 함께 호출(&lt;strong&gt;객체 생성 외에는 호출할 수 없음&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;인스턴스를 &lt;strong&gt;초기화&lt;/strong&gt; 하는 코드가 구현됨(주로 멤버 변수 &lt;strong&gt;초기화&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;반환 값이 없음&lt;/strong&gt;, 상속되지 않음&lt;/li&gt;
+  &lt;li&gt;생성자는 &lt;strong&gt;클래스 이름과 동일&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;사실 우리는 생성자를 사용했었다. 아래의 코드를보자.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Student studentLee = new Student();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이것은 기본생성자라고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;기본-생성자default-constructor&quot;&gt;기본 생성자(default constructor)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;하나의 클래스에는 반드시 하나 이상의 생성자가 존재해야함&lt;/li&gt;
+  &lt;li&gt;프로그래머가 생성자를 구현하지않으면 자바 컴파일러가 생성자 코드를 넣어줌 (이게 기본생성자이다.)&lt;/li&gt;
+  &lt;li&gt;기본생성자는 매개변수가 없고, 구현부가 없음&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;만약 클래스에 다른 생성자가 있는 경우 디폴트 생성자는 제공되지 않음&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;기본으로 생성성되는 기본생성자 말고 직접 생성자를 구현해보자&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“나는 학생을 생성할때 항상 학생의 이름과 학번을 초기화하고싶다.”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pubic&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;주소없음&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“이름은 꼭 초기화 하고싶다.””&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pubic&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 생성자를 여러개 놓을수있다. 이것을 &lt;strong&gt;오버로딩(Overloading)&lt;/strong&gt;이라고한다.
+이름이 같지만 매개변수가 다른경우에 여러개의 메서드나 생성자가 있을수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;생성자-오버로딩constructor-overloading&quot;&gt;생성자 오버로딩(constructor overloading)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;생성자를 두개이상 구현하는 경우&lt;/li&gt;
+  &lt;li&gt;사용하는 코드에서 여러 생성자 중 선택하여 사용할 수 있음&lt;/li&gt;
+  &lt;li&gt;private 변수도 생성자를 이용하여 초기화를 할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이 클래스 내부에서만 사용가능한 변수. 외부에서는 참조할수 없다 라는 의미. 나중에 정보은닉을 배울때 더 자세히 배우겠다.&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="constructor" /><category term="overroding" /><summary type="html">생성자와 생성자 오버로딩에 대해서 알아보자</summary></entry><entry><title type="html">[Java] 참조 자료형(Reference Data Type)</title><link href="http://localhost:4000/java/referenceDataType/" rel="alternate" type="text/html" title="[Java] 참조 자료형(Reference Data Type)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/referenceDataType</id><content type="html" xml:base="http://localhost:4000/java/referenceDataType/">&lt;h2 id=&quot;참조-자료형reference-data-type&quot;&gt;참조 자료형(reference data type)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;변수의 자료형
+    &lt;ul&gt;
+      &lt;li&gt;기본자료형: int, long, float, double&lt;/li&gt;
+      &lt;li&gt;참조 자료형: String, Date, Student 등&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;변수는 크게 두가지 자료형으로 나눌수있다. 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조 자료형은 클래스에 따라 다르다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;클래스형으로 변수를 선언한다&lt;/li&gt;
+  &lt;li&gt;대표예) String name;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;참조-자료형-직접-만들어-사용하기&quot;&gt;참조 자료형 직접 만들어 사용하기&lt;/h2&gt;
+&lt;p&gt;학생클래스(Student)에 있는 과목 이름, 과목 성적 속성을 과목 클래스(Subject)로 분리하고 Subject 참조 자료형 멤버 변수를 Student에 정의하여 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/referenceDataType/1.PNG&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;koreanScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mathScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;engScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;koreanName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mathName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;engName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위의 코드는 클래스의 성격상 좋은방법이아니다. 학생클래스인데 과목얘기가 더많이 있기 때문이다. Student클래스에서 Subject에 대한 속성은 Subject클래스를 만들자.&lt;/p&gt;
+
+&lt;p&gt;```java Student.java
+package reference;&lt;/p&gt;
+
+&lt;p&gt;public class Student {&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int studentID;
+String studentName;
+
+Subject korea;
+Subject math; // 참조자료형 타입으로 변수를 선언하고
+
+public Student(int id, String name) {
+	studentID = id;
+	studentName = name;
+
+	korea = new Subject();
+	math = new Subject(); // 이 변수를 생성자에서 초기화를했다. 코리아와 메스가 생성이된것이다.
+}
+
+public void setKoreaSubject(String name, int score) {
+	korea.score = score;
+	korea.subjectName = name;
+
+}
+
+public void setMathSubject(String name, int score) {
+	math.subjectName = name;
+	math.score = score;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+```java Subject.java
+package reference;
+
+public class Subject {
+
+	String subjectName;
+	int score;
+	int subjectID;
+
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="reference data type" /><summary type="html">참조 자료형에대해 알아보자</summary></entry><entry><title type="html">[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)</title><link href="http://localhost:4000/java/Instance&HeapMemory/" rel="alternate" type="text/html" title="[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)" /><published>2020-11-30T00:00:00+09:00</published><updated>2020-11-30T00:00:00+09:00</updated><id>http://localhost:4000/java/Instance&amp;HeapMemory</id><content type="html" xml:base="http://localhost:4000/java/Instance&amp;HeapMemory/">&lt;h2 id=&quot;인스턴스&quot;&gt;인스턴스&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;클래스로부터 생성된 객체 힙 메모리에 멤버 변수의 크기에 따라 메모리가 생성.
+클래스를 기반으로 new키워드를 이용하여 여러개의 인스턴스를 생성한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;classpart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StudentTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+		&lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentLee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;studentLee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;studentName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이순신&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;studentLee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;서울&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;studentLee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;showStudentInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+		&lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentKim&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;studentKim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;studentName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;김유신&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;studentKim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;경주&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;studentKim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;showStudentInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;어떤 변수이름으로 객체를 생성하게되면 힙(Heap)이라는 메모리에 그 객체가 생성이된다. 객체가 가지는 멤버변수의 사이즈만큼 메모리가 잡힌다. 
+이것들을 인스턴스라고한다. 인스턴스들은 각각의 멤버값을 갖게된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/1.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;classpart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showStudentInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;, &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getStudentName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위의 Student클래스에서 studentID, studentName, address들은 클래스에서 전반적으로 쓰는 멤버변수이다. 
+멤버변수의 생성시기?  new했을때 
+생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.
+힙(Heap)은 동적메모리라고한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/2.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StudentLee&lt;/code&gt;라는 값은 스택메모리에 어드레스 사이즈 만큼 생긴다.&lt;/p&gt;
+
+&lt;p&gt;힙(Heap)에  studentID, studentName, address가생기고
+스택이 가르키는 값이 힙메모리의 주소값이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/3.png&quot; alt=&quot;Alt text&quot; /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StudentLee.&lt;/code&gt; 했을때 이 주소가 가르키는 그 위치(힙)에있는 멤버변수들을 의미한다. 멤버변수값은 힙(Heap) Area에있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/goheeji.github.io/blob/master/assets/images/java/Instance&amp;amp;HeapMemory/4.png&quot; alt=&quot;Alt text&quot; /&gt;
+마찬가지로 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;StudentKim&lt;/code&gt;에 대해서도 같다.
+힙(Heap) Area에 있는객체들을 인스턴스라고한다.
+각각의 인스턴스는 별개의 메모리를 갖는다.&lt;/p&gt;
+
+&lt;p&gt;Heap메모리에 잡힌 값이 사라지는 시기
+가비지콜렉터(GC)라는 스레드가 쓰지않는 메모리를 수거하는 역할을한다. 
+적절한 타이밍에 한번씩 돌면서 더이상 참조되지 않는 메모리들은 가비지콜렉터가 알아서 수거한다. 따라서 메모리 free 할 일이 없다.&lt;/p&gt;
+
+&lt;h2 id=&quot;참조변수와-참조값&quot;&gt;참조변수와 참조값&lt;/h2&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentLee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;studentLee&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//참조변수를 출력&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;참조변수를 직접출력해보자.
+참조변수에 대한 값을 출력하게되면 출력되는 값의 기본형은&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;클래스의 풀네임@주소값
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;클래스의 풀네임은 패키지의 네임이 모두 포함된 클래스의 네임이고, 주소값은 힙의 주소를 가리키는 주소값이다. 실제는 아니고 가상 JVM이주는 해시코드값이다. 16진수로 32비트를 나타낸다.&lt;/p&gt;
+
+&lt;p&gt;이것을 참조값이라고 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;용어정리&quot;&gt;용어정리&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;용어&lt;/th&gt;
+      &lt;th&gt;설명&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;객체&lt;/td&gt;
+      &lt;td&gt;객체 지향 프로그램의 대상, 생성된 인스턴스&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;클래스&lt;/td&gt;
+      &lt;td&gt;객체를 프로그래밍하기 위해 코드로 만든 상태 (코드의 상태)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;인스턴스&lt;/td&gt;
+      &lt;td&gt;클래스가 메모리에 생성된 상태&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;멤버변수&lt;/td&gt;
+      &lt;td&gt;클래스의 속성, 특성&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;메서드&lt;/td&gt;
+      &lt;td&gt;멤버 변수를 이용하여 클래스의 기능을 구현&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;참조 변수&lt;/td&gt;
+      &lt;td&gt;메모리에 생성된 인스턴스를 가리키는 변수&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;참조값&lt;/td&gt;
+      &lt;td&gt;생성된 인스턴스의 메모리 주소 값&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="instance" /><category term="HeapMemory" /><summary type="html">인스턴스와 힙메모리에 대해서 알아보자</summary></entry><entry><title type="html">[Java] 메서드(Method)</title><link href="http://localhost:4000/java/method/" rel="alternate" type="text/html" title="[Java] 메서드(Method)" /><published>2020-11-25T00:00:00+09:00</published><updated>2020-11-25T00:00:00+09:00</updated><id>http://localhost:4000/java/method</id><content type="html" xml:base="http://localhost:4000/java/method/">&lt;h2 id=&quot;메서드method란&quot;&gt;메서드(method)란?&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;객체의 기능을 구현하기 위해 클래스 내부에 구현되는 함수&lt;/li&gt;
   &lt;li&gt;메서드를 구현함으로써 객체의 기능이 구현 됨&lt;/li&gt;
@@ -473,51 +742,7 @@ Sitemap: https://goheeji.github.io/sitemap.xml
 sitemap까지 등록되었다면 검색 노출까지 일주일 정도 기간이 걸린다고 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;https://honbabzone.com/jekyll/start-gitHubBlog/&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Git" /><category term="GitBlog" /><category term="jekyll" /><summary type="html">내 게시글을 구글링되게 해보자</summary></entry><entry><title type="html">[Jekyll]Notice 스타일 적용하기</title><link href="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style/" rel="alternate" type="text/html" title="[Jekyll]Notice 스타일 적용하기" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style</id><content type="html" xml:base="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style/">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Notice.:**
-기본적인 Notice
-{: .notice}
-
-**Promary Notice**
-중요한 Notice
-{: .notice--primary}
-
-**Info Notice**
-정보 Notice
-{: .notice--info}
-
-**warning Notice:**
-경고 Notice
-{: .notice--warning}
-
-**Danger Notice:**
-Danger Notice
-{: .notice--danger}
-
-**Success Notice:**
-Success Notice
-{: .notice--success}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Notice.:&lt;/strong&gt;
-기본적인 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--primary&quot;&gt;&lt;strong&gt;Promary Notice&lt;/strong&gt;
-중요한 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Info Notice&lt;/strong&gt;
-정보 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;warning Notice:&lt;/strong&gt;
-경고 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--danger&quot;&gt;&lt;strong&gt;Danger Notice:&lt;/strong&gt;
-Danger Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--success&quot;&gt;&lt;strong&gt;Success Notice:&lt;/strong&gt;
-Success Notice&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="빵부스러기" /><category term="notice" /><category term="jekyll" /><summary type="html">텍스트 블럭을 예쁘게 장식해보자</summary></entry><entry><title type="html">[Markdown]마크다운(markdown) 문법 총정리</title><link href="http://localhost:4000/markdown/markdown-Syntax/" rel="alternate" type="text/html" title="[Markdown]마크다운(markdown) 문법 총정리" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/markdown/markdown-Syntax</id><content type="html" xml:base="http://localhost:4000/markdown/markdown-Syntax/">&lt;h2 id=&quot;1-헤더-headers&quot;&gt;1. 헤더 Headers&lt;/h2&gt;
+&lt;p&gt;https://honbabzone.com/jekyll/start-gitHubBlog/&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Git" /><category term="GitBlog" /><category term="jekyll" /><summary type="html">내 게시글을 구글링되게 해보자</summary></entry><entry><title type="html">[Markdown]마크다운(markdown) 문법 총정리</title><link href="http://localhost:4000/markdown/markdown-Syntax/" rel="alternate" type="text/html" title="[Markdown]마크다운(markdown) 문법 총정리" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/markdown/markdown-Syntax</id><content type="html" xml:base="http://localhost:4000/markdown/markdown-Syntax/">&lt;h2 id=&quot;1-헤더-headers&quot;&gt;1. 헤더 Headers&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;큰제목: 문서제목&lt;/li&gt;
 &lt;/ul&gt;
@@ -1008,4 +1233,48 @@ Link: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot
   &lt;li&gt;
     &lt;p&gt;https://gist.github.com/ihoneymon/652be052a0727ad59601&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Markdown" /><category term="Markdown" /><summary type="html">마크다운 문법을 정복해보자</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Markdown" /><category term="Markdown" /><summary type="html">마크다운 문법을 정복해보자</summary></entry><entry><title type="html">[Jekyll]Notice 스타일 적용하기</title><link href="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style/" rel="alternate" type="text/html" title="[Jekyll]Notice 스타일 적용하기" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style</id><content type="html" xml:base="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style/">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Notice.:**
+기본적인 Notice
+{: .notice}
+
+**Promary Notice**
+중요한 Notice
+{: .notice--primary}
+
+**Info Notice**
+정보 Notice
+{: .notice--info}
+
+**warning Notice:**
+경고 Notice
+{: .notice--warning}
+
+**Danger Notice:**
+Danger Notice
+{: .notice--danger}
+
+**Success Notice:**
+Success Notice
+{: .notice--success}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Notice.:&lt;/strong&gt;
+기본적인 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--primary&quot;&gt;&lt;strong&gt;Promary Notice&lt;/strong&gt;
+중요한 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Info Notice&lt;/strong&gt;
+정보 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;warning Notice:&lt;/strong&gt;
+경고 Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--danger&quot;&gt;&lt;strong&gt;Danger Notice:&lt;/strong&gt;
+Danger Notice&lt;/p&gt;
+
+&lt;p class=&quot;notice--success&quot;&gt;&lt;strong&gt;Success Notice:&lt;/strong&gt;
+Success Notice&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="빵부스러기" /><category term="notice" /><category term="jekyll" /><summary type="html">텍스트 블럭을 예쁘게 장식해보자</summary></entry></feed>
