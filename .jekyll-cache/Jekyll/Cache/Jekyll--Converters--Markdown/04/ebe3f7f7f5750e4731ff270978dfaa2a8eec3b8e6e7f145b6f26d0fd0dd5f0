@@ -1,0 +1,7 @@
+I"<h1 id="static변수와-static메서드">static변수와 static메서드</h1>
+<h2 id="static-변수">static 변수</h2>
+<ul>
+  <li>여러 인스턴스가 하나의 값을 공유할 필요가 있어서 사용!
+<img src="/assets/images/java/static/1.png" /><br /><br /></li>
+</ul>
+:ET

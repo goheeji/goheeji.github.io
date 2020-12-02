@@ -1,4 +1,321 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-01T22:38:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)</title><link href="http://localhost:4000/java/constructor&constructorOverroding/" rel="alternate" type="text/html" title="[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/constructor&amp;constructorOverroding</id><content type="html" xml:base="http://localhost:4000/java/constructor&amp;constructorOverroding/">&lt;h2 id=&quot;생성자constructor&quot;&gt;생성자(constructor)&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-02T21:54:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] static 변수와 static 메서드</title><link href="http://localhost:4000/java/static-variable,static-method/" rel="alternate" type="text/html" title="[Java] static 변수와 static 메서드" /><published>2020-12-02T00:00:00+09:00</published><updated>2020-12-02T00:00:00+09:00</updated><id>http://localhost:4000/java/static-variable,static-method</id><content type="html" xml:base="http://localhost:4000/java/static-variable,static-method/">&lt;h2 id=&quot;static-변수&quot;&gt;static 변수&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;여러 인스턴스가 하나의 값을 공유할 필요가 있어서 사용!&lt;br /&gt;
+&lt;img src=&quot;/assets/images/java/static/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;static 변수는 처음 프로그램이 로드 될 때 데이터 영역에 생성된다.&lt;/li&gt;
+  &lt;li&gt;인스턴스의 생성과 상관 없이 사용할 수 있으므로 클래스 이름으로 참조한다.
+    &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;serialNum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;클래스 변수, 정적 변수라고도 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;static-변수와-인스턴스-변수&quot;&gt;static 변수와 인스턴스 변수&lt;/h2&gt;
+
+&lt;p&gt;데이터 영역에 위치한 동일한 메모리를 참조&lt;br /&gt;
+&lt;img src=&quot;/assets/images/java/static/2.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;static-메서드&quot;&gt;static 메서드&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;static 변수를 위한 기능을 제공하는 static 메서드&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;static메서드에서는 인스턴스 변수를 사용할 수 없음&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;클래스 이름으로 참조하여 사용하는 메서드&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSerialNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;클래스 메서드, 정적 메서드라고도 함.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;프로그램에서-변수의-유형&quot;&gt;프로그램에서 변수의 유형&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/static/3.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><summary type="html">static에 대해 알아보자</summary></entry><entry><title type="html">[Java] Singleton Pattern</title><link href="http://localhost:4000/java/singleton-Pattern/" rel="alternate" type="text/html" title="[Java] Singleton Pattern" /><published>2020-12-02T00:00:00+09:00</published><updated>2020-12-02T00:00:00+09:00</updated><id>http://localhost:4000/java/singleton-Pattern</id><content type="html" xml:base="http://localhost:4000/java/singleton-Pattern/">&lt;h2 id=&quot;단-하나만-존재하는-인스턴스---singleton-pattern&quot;&gt;단 하나만 존재하는 인스턴스 - singleton pattern&lt;/h2&gt;
+&lt;p&gt;ex) 학교, 회사, 날짜&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;생성자는 private으로 만든다.&lt;/li&gt;
+  &lt;li&gt;static으로 유일한 객체를 생성&lt;/li&gt;
+  &lt;li&gt;외부에서 유일한 객체를 참조할 수 있는 public static get() 메서드 구현&lt;br /&gt;
+&lt;img src=&quot;/assets/images/java/singleton-pattern/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;staticex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 자기자신의 타입을 가진 변수 인스턴스를 만든다.&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 외부에서 인스턴스의 생성과 상관없이 호출하기위해 static으로 한다.&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;staticex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CompanyTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated method stub&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;company2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Company&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;company1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;company2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;단 하나만 생성이 되므로 company1 과 company2의 값은 같다.&lt;/p&gt;
+
+&lt;p&gt;날짜로 예를들면,&lt;/p&gt;
+
+&lt;p&gt;이렇게 하면 안된다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Calendar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 가져와야한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Calendar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="singleton pattern" /><summary type="html">싱글톤 패턴에 대해 알아보자</summary></entry><entry><title type="html">[Java] 정보 은닉 (information hiding)</title><link href="http://localhost:4000/java/information-hiding/" rel="alternate" type="text/html" title="[Java] 정보 은닉 (information hiding)" /><published>2020-12-02T00:00:00+09:00</published><updated>2020-12-02T00:00:00+09:00</updated><id>http://localhost:4000/java/information-hiding</id><content type="html" xml:base="http://localhost:4000/java/information-hiding/">&lt;h2 id=&quot;접근-제어자access-modifier&quot;&gt;접근 제어자(access modifier)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;변수 메서드, 생성자에 대한 접근 권한 지정&lt;/li&gt;
+  &lt;li&gt;public, private, protected, 아무것도 안쓰는 경우(기본 접근 제어자)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;private를 사용하면 클래스 외부에서는 접근 할 수 없음&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;public은 외부에 모두 오픈하겠다.&lt;/li&gt;
+  &lt;li&gt;private 클래스 내부에서만 사용하겠다.&lt;/li&gt;
+  &lt;li&gt;protected 상위클래스가 가진 private 변수나 메소드를 하위클래스에 퍼블릭하게 오픈하고싶을때 사용겠다. (나중에 자세히 살펴봄!)&lt;/li&gt;
+  &lt;li&gt;기본접근제어자는 같은 패키지 내에서만 참조가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;private 키워드를 통해서 정보은닉 구현이 가능하다
+그방법에 대해서 알아보자&lt;/p&gt;
+
+&lt;h2 id=&quot;정보은닉information-hiding&quot;&gt;정보은닉(information hiding)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;외부에서 클래스 내부의 정보에 접근하지 못하도록함
+  private 키워드를 활용&lt;/li&gt;
+  &lt;li&gt;private 변수를 외부에서 접근하게 하려면 public 메서드를 제공할수 있다.&lt;/li&gt;
+  &lt;li&gt;통상적으로 get set을 많이쓴다.&lt;/li&gt;
+  &lt;li&gt;클래스 내부 데이터를 잘못 사용하는 오류를 방지 할 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyDate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setDay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 값을 넣을때&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 값을 가져갈때&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMonth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMonth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;isValid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+			&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getYear&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setYear&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isValid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;년&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;월&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;일&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;유효하지 않은 날짜 입니다.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyDateTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated method stub&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;MyDate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		
+		&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setYear&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2020&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setMonth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setDay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		
+		&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;showDate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><summary type="html">정보 은닉에 대해 알아보자</summary></entry><entry><title type="html">[Java] 객체 간 협력</title><link href="http://localhost:4000/java/cooperation/" rel="alternate" type="text/html" title="[Java] 객체 간 협력" /><published>2020-12-02T00:00:00+09:00</published><updated>2020-12-02T00:00:00+09:00</updated><id>http://localhost:4000/java/cooperation</id><content type="html" xml:base="http://localhost:4000/java/cooperation/">&lt;h1 id=&quot;객체-간-협력&quot;&gt;객체 간 협력&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;객체 지향 프로그램은 객체를 정의하고 객체간의 협력을 구현한 프로그램&lt;/li&gt;
+  &lt;li&gt;학생이 지하철이나 버스를 타고 학교 가는 과정에서 일어나는 협력
+&lt;img src=&quot;/assets/images/java/cooperation/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><summary type="html">객체 간 협력에 대해 알아보자</summary></entry><entry><title type="html">[Java] this</title><link href="http://localhost:4000/java/this/" rel="alternate" type="text/html" title="[Java] this" /><published>2020-12-02T00:00:00+09:00</published><updated>2020-12-02T00:00:00+09:00</updated><id>http://localhost:4000/java/this</id><content type="html" xml:base="http://localhost:4000/java/this/">&lt;h2 id=&quot;this의-역할&quot;&gt;this의 역할&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;자기자신의 메모리를 가리킴&lt;/li&gt;
+  &lt;li&gt;생성자에서 다른 생성자를 호출 함&lt;/li&gt;
+  &lt;li&gt;인스턴스 자신의 주소를 반환
+    &lt;h2 id=&quot;자기-자신의-메모리를-가리키는-this&quot;&gt;자기 자신의 메모리를 가리키는 this&lt;/h2&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/java/this/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;생성자에서-다른-생성자를-호출&quot;&gt;생성자에서 다른 생성자를 호출&lt;/h2&gt;
+
+&lt;p&gt;이렇게 사용하지않고,&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;이름없음&quot;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;이렇게 사용함&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;이름없음&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;주의점은 this로 다른 생성자를 호출할때 this()가 first statement여야 한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;인스턴스-자신의-주소를-반환&quot;&gt;인스턴스 자신의 주소를 반환&lt;/h2&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getSelf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;// 이때 반환타입은 자기 클래스타입&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; 
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PersonTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		
+		&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;personKo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ko&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;personKo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;showInfo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;personKo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+		&lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;personKo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getSelf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;personKo의 출력값과 p의 출력값이 같다&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="this" /><summary type="html">this에 대해 알아보자</summary></entry><entry><title type="html">[Java] 참조 자료형(Reference Data Type)</title><link href="http://localhost:4000/java/referenceDataType/" rel="alternate" type="text/html" title="[Java] 참조 자료형(Reference Data Type)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/referenceDataType</id><content type="html" xml:base="http://localhost:4000/java/referenceDataType/">&lt;h2 id=&quot;참조-자료형reference-data-type&quot;&gt;참조 자료형(reference data type)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;변수의 자료형
+    &lt;ul&gt;
+      &lt;li&gt;기본자료형: int, long, float, double&lt;/li&gt;
+      &lt;li&gt;참조 자료형: String, Date, Student 등&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;변수는 크게 두가지 자료형으로 나눌수있다. 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조 자료형은 클래스에 따라 다르다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;클래스형으로 변수를 선언한다&lt;/li&gt;
+  &lt;li&gt;대표예) String name;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;참조-자료형-직접-만들어-사용하기&quot;&gt;참조 자료형 직접 만들어 사용하기&lt;/h2&gt;
+&lt;p&gt;학생클래스(Student)에 있는 과목 이름, 과목 성적 속성을 과목 클래스(Subject)로 분리하고 Subject 참조 자료형 멤버 변수를 Student에 정의하여 사용한다.
+&lt;img src=&quot;/assets/images/java/referenceDataType/1.PNG&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;koreanScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mathScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;engScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;koreanName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mathName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;engName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위의 코드는 클래스의 성격상 좋은방법이아니다. 학생클래스인데 과목얘기가 더많이 있기 때문이다. Student클래스에서 Subject에 대한 속성은 Subject클래스를 만들자.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;reference&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;nc&quot;&gt;Subject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;korea&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nc&quot;&gt;Subject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 참조자료형 타입으로 변수를 선언하고&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;korea&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Subject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 이 변수를 생성자에서 초기화를했다. 코리아와 메스가 생성이된것이다.&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setKoreaSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;korea&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;korea&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;subjectName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setMathSubject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;subjectName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;math&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;reference&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Subject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subjectName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;subjectID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="reference data type" /><summary type="html">참조 자료형에대해 알아보자</summary></entry><entry><title type="html">[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)</title><link href="http://localhost:4000/java/constructor&constructorOverroding/" rel="alternate" type="text/html" title="[Java] 생성자(constructor)와 생성자 오버로딩(constructor overroding)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/constructor&amp;constructorOverroding</id><content type="html" xml:base="http://localhost:4000/java/constructor&amp;constructorOverroding/">&lt;h2 id=&quot;생성자constructor&quot;&gt;생성자(constructor)&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;객체를 생성할 때 new 키워드와 함께 호출(&lt;strong&gt;객체 생성 외에는 호출할 수 없음&lt;/strong&gt;)&lt;/li&gt;
   &lt;li&gt;인스턴스를 &lt;strong&gt;초기화&lt;/strong&gt; 하는 코드가 구현됨(주로 멤버 변수 &lt;strong&gt;초기화&lt;/strong&gt;)&lt;/li&gt;
@@ -53,90 +370,7 @@
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이 클래스 내부에서만 사용가능한 변수. 외부에서는 참조할수 없다 라는 의미. 나중에 정보은닉을 배울때 더 자세히 배우겠다.&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="constructor" /><category term="overroding" /><summary type="html">생성자와 생성자 오버로딩에 대해서 알아보자</summary></entry><entry><title type="html">[Java] 참조 자료형(Reference Data Type)</title><link href="http://localhost:4000/java/referenceDataType/" rel="alternate" type="text/html" title="[Java] 참조 자료형(Reference Data Type)" /><published>2020-12-01T00:00:00+09:00</published><updated>2020-12-01T00:00:00+09:00</updated><id>http://localhost:4000/java/referenceDataType</id><content type="html" xml:base="http://localhost:4000/java/referenceDataType/">&lt;h2 id=&quot;참조-자료형reference-data-type&quot;&gt;참조 자료형(reference data type)&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;변수의 자료형
-    &lt;ul&gt;
-      &lt;li&gt;기본자료형: int, long, float, double&lt;/li&gt;
-      &lt;li&gt;참조 자료형: String, Date, Student 등&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;변수는 크게 두가지 자료형으로 나눌수있다. 기본 자료형은 사용하는 메모리가 정해져 있지만, 참조 자료형은 클래스에 따라 다르다.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;클래스형으로 변수를 선언한다&lt;/li&gt;
-  &lt;li&gt;대표예) String name;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;참조-자료형-직접-만들어-사용하기&quot;&gt;참조 자료형 직접 만들어 사용하기&lt;/h2&gt;
-&lt;p&gt;학생클래스(Student)에 있는 과목 이름, 과목 성적 속성을 과목 클래스(Subject)로 분리하고 Subject 참조 자료형 멤버 변수를 Student에 정의하여 사용한다.
-&lt;img src=&quot;/assets/images/java/referenceDataType/1.PNG&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;studentName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;koreanScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mathScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;engScore&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	
-	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;koreanName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mathName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;engName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;위의 코드는 클래스의 성격상 좋은방법이아니다. 학생클래스인데 과목얘기가 더많이 있기 때문이다. Student클래스에서 Subject에 대한 속성은 Subject클래스를 만들자.&lt;/p&gt;
-
-&lt;p&gt;```java Student.java
-package reference;&lt;/p&gt;
-
-&lt;p&gt;public class Student {&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int studentID;
-String studentName;
-
-Subject korea;
-Subject math; // 참조자료형 타입으로 변수를 선언하고
-
-public Student(int id, String name) {
-	studentID = id;
-	studentName = name;
-
-	korea = new Subject();
-	math = new Subject(); // 이 변수를 생성자에서 초기화를했다. 코리아와 메스가 생성이된것이다.
-}
-
-public void setKoreaSubject(String name, int score) {
-	korea.score = score;
-	korea.subjectName = name;
-
-}
-
-public void setMathSubject(String name, int score) {
-	math.subjectName = name;
-	math.score = score;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-```java Subject.java
-package reference;
-
-public class Subject {
-
-	String subjectName;
-	int score;
-	int subjectID;
-
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="reference data type" /><summary type="html">참조 자료형에대해 알아보자</summary></entry><entry><title type="html">[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)</title><link href="http://localhost:4000/java/Instance&HeapMemory/" rel="alternate" type="text/html" title="[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)" /><published>2020-11-30T00:00:00+09:00</published><updated>2020-11-30T00:00:00+09:00</updated><id>http://localhost:4000/java/Instance&amp;HeapMemory</id><content type="html" xml:base="http://localhost:4000/java/Instance&amp;HeapMemory/">&lt;h2 id=&quot;인스턴스&quot;&gt;인스턴스&lt;/h2&gt;
+&lt;p&gt;이 클래스 내부에서만 사용가능한 변수. 외부에서는 참조할수 없다 라는 의미. 나중에 정보은닉을 배울때 더 자세히 배우겠다.&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="constructor" /><category term="overroding" /><summary type="html">생성자와 생성자 오버로딩에 대해서 알아보자</summary></entry><entry><title type="html">[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)</title><link href="http://localhost:4000/java/Instance&HeapMemory/" rel="alternate" type="text/html" title="[Java] 인스턴스(Instance)와 힙메모리(HeapMemory)" /><published>2020-11-30T00:00:00+09:00</published><updated>2020-11-30T00:00:00+09:00</updated><id>http://localhost:4000/java/Instance&amp;HeapMemory</id><content type="html" xml:base="http://localhost:4000/java/Instance&amp;HeapMemory/">&lt;h2 id=&quot;인스턴스&quot;&gt;인스턴스&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;클래스로부터 생성된 객체 힙 메모리에 멤버 변수의 크기에 따라 메모리가 생성.
 클래스를 기반으로 new키워드를 이용하여 여러개의 인스턴스를 생성한다.&lt;/li&gt;
@@ -190,9 +424,9 @@ public class Subject {
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;위의 Student클래스에서 studentID, studentName, address들은 클래스에서 전반적으로 쓰는 멤버변수이다. 
-멤버변수의 생성시기?  new했을때 
-생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.
+&lt;p&gt;위의 Student클래스에서 studentID, studentName, address들은 클래스에서 전반적으로 쓰는 멤버변수이다.&lt;br /&gt; 
+멤버변수의 생성시기?  new했을때&lt;br /&gt; 
+생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.&lt;br /&gt;
 힙(Heap)은 동적메모리라고한다.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/java/Instance&amp;amp;HeapMemory/2.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
@@ -499,781 +733,4 @@ Would remove tmp/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Git" /><category term="Git" /><summary type="html">add, commit, push 실수를 했을 때, 당황하지말고 이 포스팅을 보자</summary></entry><entry><title type="html">[Java] 함수(Fuction)</title><link href="http://localhost:4000/java/function/" rel="alternate" type="text/html" title="[Java] 함수(Fuction)" /><published>2020-11-22T00:00:00+09:00</published><updated>2020-11-22T00:00:00+09:00</updated><id>http://localhost:4000/java/function</id><content type="html" xml:base="http://localhost:4000/java/function/">&lt;h2 id=&quot;함수란-무엇인가요&quot;&gt;함수란 무엇인가요?&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;함수 (function)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;하나의 기능을 수행하는 일련의 코드&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;함수는 호출하여 사용하고 기능이 수행된 후 값을 반환 할 수 있음&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;함수로 구현된 기능은 여러 곳에서 호출되어 사용 될 수 있음&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;함수를 쓰는 것을 “함수를 호출한다”라고 한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;이 결과를 나를 호출해준 함수에 돌려준다 라는것은 반환 값을 리턴할 수 있다는 것.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;함수(function)의 장점&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;코드의 재사용 가능&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;기능이 분리되어있기 때문에 가독성이 좋다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;함수를 나누어서 코딩을 하게되면 디버깅, 코드 업데이트, 버전업을 할때 유용하다.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;요약: 함수는 분리되어있고 호출해서 사용한다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;함수의-입력과-반환&quot;&gt;함수의 입력과 반환&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/java/fuction/1.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;들어가는 값을 매개변수라고하며 결과값을 반환값이라고한다.&lt;/p&gt;
-
-&lt;p&gt;매개변수, 함수, 반환값이 함수의 요소지만 함수에 따라서 매개변수, 반환값이 없을수도 있다.&lt;/p&gt;
-
-&lt;h2 id=&quot;함수-정의-하기&quot;&gt;함수 정의 하기&lt;/h2&gt;
-&lt;p&gt;함수는 이름, 매개변수, 반환 값, 함수 몸체(body)로 구성됨&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//만약에 반환되는 값이 없다면 void 라고 하기 반환값의 타입, 함수이름, 매개변수&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;실제-코드-쳐보기&quot;&gt;실제 코드 쳐보기&lt;/h2&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;classpart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FuctionTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 왜 static이라고 정의했는지는 나중에 설명 여기서는 함수의 기능에 대해서만 얘기한다.&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;c1&quot;&gt;// 반환값이 없을경우&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;greeting&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;c1&quot;&gt;// 매개변수 필요없는 경우&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;calcSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-		&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;// TODO Auto-generated method stub&lt;/span&gt;
-
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-		&lt;span class=&quot;c1&quot;&gt;// 함수는 호출되어야 사용가능하다.&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addNum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 함수호출&lt;/span&gt;
-		&lt;span class=&quot;c1&quot;&gt;// int로 넘어와서 int로 받았다. 반환값이 없으면 값을 받을수 없다.&lt;/span&gt;
-		
-		&lt;span class=&quot;n&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;안녕하세요&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calcSum&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Java" /><category term="java" /><category term="fuction" /><summary type="html">함수의 기본을 다져보자</summary></entry><entry><title type="html">[Github].gitignore File 적용하기</title><link href="http://localhost:4000/git/apply-.gitignore-file/" rel="alternate" type="text/html" title="[Github].gitignore File 적용하기" /><published>2020-11-19T00:00:00+09:00</published><updated>2020-11-19T00:00:00+09:00</updated><id>http://localhost:4000/git/apply-.gitignore-file</id><content type="html" xml:base="http://localhost:4000/git/apply-.gitignore-file/">&lt;h1 id=&quot;gitignore-란&quot;&gt;.gitignore 란?&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;버전관리에서 제외시킬 파일들의 목록을 가진 설정 파일&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;gitignore-파일-만들기&quot;&gt;.gitignore 파일 만들기&lt;/h1&gt;
-
-&lt;h2 id=&quot;1-gitignore파일을-만든다&quot;&gt;1. .gitignore파일을 만든다.&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;항상 최상위 디렉토리에 존재해야한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;버전관리에서 제외시킬 파일 또는 디렉터리를 입력한다.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;문법 예시&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# : comments
-
-# no .a files
-*.a
-
-# but do track lib.a, even though you're ignoring .a files above
-!lib.a
-
-# only ignore the TODO file in the current directory, not subdir/TODO
-/TODO
-
-# ignore all files in the build/ directory
-build/
-
-# ignore doc/notes.txt, but not doc/server/arch.txt
-doc/*.txt
-
-# ignore all .pdf files in the doc/ directory
-doc/**/*.pdf
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;특정 확장자로 끝나는 파일을 모두 버전관리에서 제외할 때는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*.파일확장자&lt;/code&gt; 처럼 적어주면 되고, 특정 디렉터리를 모두 제외할 경우 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;디렉터리명/&lt;/code&gt; 으로 기입하면 된다.&lt;/p&gt;
-
-&lt;h2 id=&quot;2-적용하기&quot;&gt;2. 적용하기&lt;/h2&gt;
-&lt;h3 id=&quot;21-버전관리중인-파일이-없는-상태에서-gitignore을-적용하고-싶은-경우&quot;&gt;2.1 .버전관리중인 파일이 없는 상태에서 .gitignore을 적용하고 싶은 경우&lt;/h3&gt;
-&lt;p&gt;.gitignore File을 같이 push&lt;/p&gt;
-
-&lt;h3 id=&quot;22-이미-버전관리-중인-파일을-github에서-삭제하고-gitignore을-적용하고-싶은-경우&quot;&gt;2.2 이미 버전관리 중인 파일을 Github에서 삭제하고 .gitignore을 적용하고 싶은 경우&lt;/h3&gt;
-&lt;h4 id=&quot;221-현재-repository-캐시-모두-삭제&quot;&gt;2.2.1 현재 Repository 캐시 모두 삭제&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cached&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;222-gitignore와-함께-push&quot;&gt;2.2.2 .gitignore와 함께 push&lt;/h4&gt;
-
-&lt;h2 id=&quot;3-성공&quot;&gt;3. 성공&lt;/h2&gt;
-&lt;p&gt;Local에서는 .gitignore설정한 파일들이 사라지지않지만 Remote에는 적용되어 올라간 모습을 볼수 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/apply-.gitignore-file/1.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;참고사항&quot;&gt;참고사항&lt;/h3&gt;
-&lt;p&gt;아래의 사이트에서 운영체제, 개발환경, 프로그래밍언어에 따른 .gitignore파일을 만들어준다.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.toptal.com/developers/gitignore&quot;&gt;https://www.toptal.com/developers/gitignore&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/apply-.gitignore-file/2.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;references&quot;&gt;references&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://nesoy.github.io/articles/2017-01/Git-Ignore&quot;&gt;https://nesoy.github.io/articles/2017-01/Git-Ignore&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://velog.io/@aquarius1997/gitignore-%EC%84%A4%EC%A0%95&quot;&gt;https://velog.io/@aquarius1997/gitignore-%EC%84%A4%EC%A0%95&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Git" /><category term="Github" /><summary type="html">버전관리에 필요없는 파일들을 무시해보자</summary></entry><entry><title type="html">[Jekyll]내 블로그 구글 검색 가능하게 하기</title><link href="http://localhost:4000/git/how-to-searched-google/" rel="alternate" type="text/html" title="[Jekyll]내 블로그 구글 검색 가능하게 하기" /><published>2020-11-17T00:00:00+09:00</published><updated>2020-11-17T00:00:00+09:00</updated><id>http://localhost:4000/git/how-to-searched-google</id><content type="html" xml:base="http://localhost:4000/git/how-to-searched-google/">&lt;h2 id=&quot;1-url-prefix에--블로그-주소-입력하기&quot;&gt;1. URL prefix에  블로그 주소 입력하기&lt;/h2&gt;
-&lt;p&gt;자신의 블로그 게시글이 구글에서 검색이 가능하게 하고싶다면 &lt;a href=&quot;https://search.google.com/search-console/about?hl=ko&amp;amp;utm_source=wmx&amp;amp;utm_medium=wmx-welcome&quot;&gt;Google Search Console&lt;/a&gt;을 통해 등록을 해야한다. 좌측은 구매한 도메인이 있을때 사용이 가능하며 하나의 도메인 등록을 통해 모든 서브도메인을 통합 관리하는 방식이다. 우측(URL prefix)은 일반적인 GitBlog일때 사용한다.&lt;/p&gt;
-
-&lt;p&gt;우리는 우측 URL prefix 방식으로 진행한다.
-URL 입력란에 자신의 깃허브 블로그 주소를 적는다.
-https://goheeji.github.io/&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/how-to-searched-google/1.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-소유권-인증하기&quot;&gt;2. 소유권 인증하기&lt;/h2&gt;
-
-&lt;p&gt;이제 블로그 도메인에 대한 소유권 인증을 진행한다. 사이트에 소유권자만이 구글 검색에 대해 허가를 내줄 수 있기 때문이다. 소유권 확인을 위한 html파일을 다운로드 한 후&lt;/p&gt;
-
-&lt;p&gt;자신의 github jekyll 블로그 루트 디렉토리에 올리고 push를 한다. push를 했다면 확인버튼을 클릭하여 소유권 인증을 마무리한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;3-sitemapxml-robotstxt-생성하기&quot;&gt;3. sitemap.xml, robots.txt 생성하기&lt;/h2&gt;
-&lt;p&gt;아직은 아무 정보가 없어 웹사이트 유입현황이나 정보를 취득하지 못한다. 물론 검색도 안된다. 구글 검색 엔진이 웹사이트를 읽어가는 작업이 진행되어야 검색이 노출되는데 이를 크롤링이라고 한다. 정상적인 크롤링을 위해서는 sitemap.xml과 robots.txt가 필요하다.&lt;/p&gt;
-
-&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;sitemap.xml&lt;/strong&gt; &lt;br /&gt;
-웹사이트 내 모든 페이지의 목록을 나열한 파일이다. 책의 목차와 같은 역할을한다.
-robots.txt 파일과는 다르게 sitemap.xml 파일은 꼭 루트 디렉토리에 위치하지 않아도된다.
-sitemap.xml은 정해진 양식으로 제작되어야하고, 이 양식은 전세계적으로 약속된 방식이다.&lt;/p&gt;
-
-&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;robots.txt&lt;/strong&gt;&lt;br /&gt;
-검색 엔진 크롤러에서 사이트에서 요청할 수 있는 페이지나 요청할 수 없는 페이지를 설정 및 제어하는 부분이다.
-검색 로봇들에게 웹사이트의 사이트맵이 어디있는지 알려주는 역할이다.
-항상 root 폴더에 위치해 /robots.txt를 입력하면 확인 가능하다.&lt;/p&gt;
-
-&lt;h3 id=&quot;31-sitemapxml-생성&quot;&gt;3.1 sitemap.xml 생성&lt;/h3&gt;
-&lt;p&gt;sitemap.xml을 수동으로 작성하기보단 jekyll-sitemap 플러그인을 통해서 관리하는 방법으로 생성한다.&lt;/p&gt;
-
-&lt;p&gt;우선 Gemfile에 하단 부분을 적어준다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;grm 'jekyll-sitemap'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;이제 cmd창에서  bundle install 명령어를 통해서 플러그인 설치를 진행하고 서버를 시작한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# bundle install
-# jekyll serve
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;정상적으로 설치가 되었다면 아래와 같이 접근이 가능하다.
-http://localhost:4000/sitemap.xml
-플러그인이 자동으로 페이지에 있는 모든 정보를 가지고 와서 sitemap을 만들어준다.&lt;/p&gt;
-
-&lt;h3 id=&quot;32-robotstxt-생성&quot;&gt;3.2 robots.txt 생성&lt;/h3&gt;
-&lt;p&gt;자신의 github jekyll 블로그 루트 디렉토리에 robots.txt파일을 생성하고 아래의 내용을 작성한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;User-agent: *
-Allow: /
-
-Sitemap: https://goheeji.github.io/sitemap.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p class=&quot;notice--info&quot;&gt;모든 웹사이트 콘텐츠에 대한 모든 웹 크롤러의 접근을 차단&lt;br /&gt;&lt;br /&gt;User-agent: *&lt;br /&gt;Disallow: /&lt;br /&gt;&lt;br /&gt;만약 구글 로봇만 차단시키고 싶다면 User-agent에  * 부분을 Googlebot으로 변경하여 설정&lt;br /&gt;&lt;br /&gt;User-agent: Yeti&lt;br /&gt;Disallow: /hello/&lt;br /&gt;&lt;br /&gt;이렇게 설정하면 웹사이트의 모든 콘텐츠의 네이버 검색로봇의 크롤링을 허용하되, /hello/ 디렉토리 안의 페이지에 대한 접근만 차단한다는 의미이다.&lt;/p&gt;
-
-&lt;h2 id=&quot;4-google에-sitemapxml-등록하기&quot;&gt;4. Google에 sitemap.xml 등록하기&lt;/h2&gt;
-&lt;p&gt;우측 상단의 &lt;a href=&quot;https://search.google.com/search-console/about?hl=ko&amp;amp;utm_source=wmx&amp;amp;utm_medium=wmx-welcome&quot;&gt;Google Search Console&lt;/a&gt;페이지 메뉴 중 sitemaps에 들어가서 생성한 sitemap.xml을 제출한다.
-&lt;img src=&quot;/assets/images/how-to-searched-google/2.png&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;&lt;/p&gt;
-
-&lt;p class=&quot;notice--danger&quot;&gt;&lt;strong&gt;Please Note:&lt;/strong&gt;
-sitemap까지 등록되었다면 검색 노출까지 일주일 정도 기간이 걸린다고 한다.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;https://honbabzone.com/jekyll/start-gitHubBlog/&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Git" /><category term="GitBlog" /><category term="jekyll" /><summary type="html">내 게시글을 구글링되게 해보자</summary></entry><entry><title type="html">[Markdown]마크다운(markdown) 문법 총정리</title><link href="http://localhost:4000/markdown/markdown-Syntax/" rel="alternate" type="text/html" title="[Markdown]마크다운(markdown) 문법 총정리" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/markdown/markdown-Syntax</id><content type="html" xml:base="http://localhost:4000/markdown/markdown-Syntax/">&lt;h2 id=&quot;1-헤더-headers&quot;&gt;1. 헤더 Headers&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;큰제목: 문서제목&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gu&quot;&gt;This is a H1
-=============
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;h1 id=&quot;this-is-a-h1&quot;&gt;This is a H1&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;작은제목: 문서 부제목&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;This is a H2
-----------------
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;h2 id=&quot;this-is-an-h2&quot;&gt;This is an H2&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;글머리: 1~6까지만 지원&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gh&quot;&gt;# This is a H1&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;## This is a H2&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;### This is a H3&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;#### This is a H4&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;##### This is a H5&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;###### This is a H6&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;h1 id=&quot;this-is-a-h1-1&quot;&gt;This is a H1&lt;/h1&gt;
-
-&lt;h2 id=&quot;this-is-a-h2&quot;&gt;This is a H2&lt;/h2&gt;
-&lt;h3 id=&quot;this-is-a-h3&quot;&gt;This is a H3&lt;/h3&gt;
-&lt;h4 id=&quot;this-is-a-h4&quot;&gt;This is a H4&lt;/h4&gt;
-&lt;h5 id=&quot;this-is-a-h5&quot;&gt;This is a H5&lt;/h5&gt;
-&lt;h6 id=&quot;this-is-a-h6&quot;&gt;This is a H6&lt;/h6&gt;
-
-&lt;h2 id=&quot;2--블럭인용&quot;&gt;2.  블럭인용&lt;/h2&gt;
-&lt;p&gt;이메일에서 사용하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; 블럭인용문자를 이용한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gt&quot;&gt;&amp;gt; This is a first blockqoute.&lt;/span&gt;
-&lt;span class=&quot;gt&quot;&gt;&amp;gt; &amp;gt;This is a second blockquote.&lt;/span&gt;
-&lt;span class=&quot;gt&quot;&gt;&amp;gt; &amp;gt; &amp;gt; This is a third blockquote.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a first blockquote.&lt;/p&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;This is a second blockquote.&lt;/p&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;This is a third blockquote.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;이 안에서는 다른 마크다운 요소를 포함 할 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gt&quot;&gt;&amp;gt; ### This is a H3&lt;/span&gt;
-&lt;span class=&quot;gt&quot;&gt;&amp;gt; * List&lt;/span&gt;
-&lt;span class=&quot;gt&quot;&gt;&amp;gt;  	```&lt;/span&gt;
-&lt;span class=&quot;gt&quot;&gt;&amp;gt;  	code&lt;/span&gt;
-&lt;span class=&quot;gt&quot;&gt;&amp;gt; 	```&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h3 id=&quot;this-is-a-h3-1&quot;&gt;This is a H3&lt;/h3&gt;
-  &lt;ul&gt;
-    &lt;li&gt;List
-      &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  code
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;3-목록&quot;&gt;3. 목록&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;순서 있는 목록(번호)
-순서있는 목록은 숫자와 점을 사용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 첫번째
-&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; 두번째
-&lt;span class=&quot;p&quot;&gt;3.&lt;/span&gt; 세번째
-&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; 1을 다시 써도 네번째
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;첫번째&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;두번째&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;세번째&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;1을 다시 써도 네번째&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;순서없는 목록(글머리 기호 : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt; 지원)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;  *&lt;/span&gt; 가
-&lt;span class=&quot;p&quot;&gt;  	*&lt;/span&gt; 나
-&lt;span class=&quot;p&quot;&gt;  		*&lt;/span&gt; 다
-&lt;span class=&quot;p&quot;&gt;  
-  +&lt;/span&gt; 가
-&lt;span class=&quot;p&quot;&gt;  	+&lt;/span&gt; 나
-&lt;span class=&quot;p&quot;&gt;  		+&lt;/span&gt; 다
-&lt;span class=&quot;p&quot;&gt;  
-  -&lt;/span&gt; 가
-&lt;span class=&quot;p&quot;&gt;  	-&lt;/span&gt; 나
-&lt;span class=&quot;p&quot;&gt;  		-&lt;/span&gt; 다
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;가
-    &lt;ul&gt;
-      &lt;li&gt;나
-        &lt;ul&gt;
-          &lt;li&gt;다&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;가
-    &lt;ul&gt;
-      &lt;li&gt;나
-        &lt;ul&gt;
-          &lt;li&gt;다&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;가
-    &lt;ul&gt;
-      &lt;li&gt;나
-        &lt;ul&gt;
-          &lt;li&gt;다&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;현재까지는 어떤 번호를 입력해도 순서는 내림차순으로 정의된다.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;4-코드강조&quot;&gt;4. 코드강조&lt;/h2&gt;
-
-&lt;p&gt;4개의 공백 또는 하나의 탭으로 들여쓰기를 만나면 변환되기 시작하여 들여쓰지 않은 행을 만날때까지 변환이 계속된다.&lt;/p&gt;
-&lt;h3 id=&quot;41-인라인inline-코드&quot;&gt;4.1 인라인(inline) 코드&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grave&lt;/code&gt;는 키보드상 숫자 1 옆에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~&lt;/code&gt; 옆에 있다.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;코드강조&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;블록코드 강조
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
-	 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;코드강조&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ```
- 블록코드 강조
- ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;42-들여쓰기&quot;&gt;4.2 들여쓰기&lt;/h3&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a normal paragraph:&lt;span class=&quot;sb&quot;&gt;
-
-    This is a code block.
-    
-&lt;/span&gt;end code block.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a code block.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;end code block.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;한줄 띄어 쓰지 않으면 인식이 제대로 안되는 문제가 발생한다.&lt;/p&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a normal paragraph:
-    This is a code block.
-end code block.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
-This is a normal paragraph:
-    This is a code block.
-end code block.&lt;/p&gt;
-
-&lt;h3 id=&quot;43-코드블럭&quot;&gt;4.3 코드블럭&lt;/h3&gt;
-
-&lt;p&gt;코드블럭은 다음과 같이 2가지 방식을 사용할 수 있습니다.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;{code}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt; 이용방식&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;pre&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;code&amp;gt;&lt;/span&gt;
-public class MyApp{
-	public static void main(String[] args){
-		System.out.println(&quot;Hello, goeasy&quot;);
-	}
-}
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/code&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;pre&gt;
-&lt;code&gt;
-public class MyApp{
-	public static void main(String[] args){
-		System.out.println(&quot;Hello, goeasy&quot;);
-	}
-}
-&lt;/code&gt;
-&lt;/pre&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;코드블럭코드(```)을 이용하는 방법
-    &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;se&quot;&gt;\`&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;``java
-  public class MyApp{
-      public static void main(String[] args){
-          System.out.println(&quot;Hello, goeasy&quot;);
-      }
-  }
-\```&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyApp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-			&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, goeasy&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;	
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;	
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;5-수평선&quot;&gt;5. 수평선&lt;/h2&gt;
-
-&lt;p&gt;아래 줄은 모두 수평선을 만든다. 마크다운 문서를 미리보기로 출력할 때 페이지 나누기 용도로 많이 사용한다.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-***
-
-* * *
-
----
-
-*****
-
-- - -
-
----------------------------------------
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;6-링크&quot;&gt;6. 링크&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;참조링크&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;문법
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;link keyword&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Optional Title here&quot;&lt;/span&gt;
-
-적용예시
-Link: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Google&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;googlelink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;googlelink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;https://google.com&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Go google&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Link: [Google][googlelink] 
-[googlelink]:  https://google.com “Go google”&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;외부링크&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;문법: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-적용예시: &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Google&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://google.com,&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;google link&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Link: &lt;a href=&quot;https://google.com,&quot; title=&quot;google link&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;자동연결&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;일반적인 URL 혹은 이메일주소인 경우 적절한 형식으로 링크를 형성한다.
-&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 외부링크: &lt;span class=&quot;nv&quot;&gt;&amp;lt;https://example.com&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 외부링크: https://example.com
-&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 이메일 링크: &lt;span class=&quot;nv&quot;&gt;&amp;lt;addrres@example.com&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;외부링크: &lt;a href=&quot;https://example.com&quot;&gt;https://example.com&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;외부링크: https://example.com&lt;/li&gt;
-  &lt;li&gt;이메일 링크: &lt;a href=&quot;mailto:addrres@example.com&quot;&gt;addrres@example.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;7-강조&quot;&gt;7. 강조&lt;/h2&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;ge&quot;&gt;*single asterisks*&lt;/span&gt;
-&lt;span class=&quot;ge&quot;&gt;_single underscores_&lt;/span&gt;
-&lt;span class=&quot;gs&quot;&gt;**double asterisks**&lt;/span&gt;
-&lt;span class=&quot;gs&quot;&gt;__double underscores__&lt;/span&gt;
-~~cancelline~~
-문장중간에 사용할 경우에는 &lt;span class=&quot;gs&quot;&gt;**띄어 쓰기**&lt;/span&gt;를 사용하는 것이 좋다.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt; &lt;br /&gt;
-&lt;em&gt;single underscores&lt;/em&gt; &lt;br /&gt;
-&lt;strong&gt;double asterisks&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;double underscores&lt;/strong&gt; &lt;br /&gt;
-&lt;del&gt;cancelline&lt;/del&gt; &lt;br /&gt;
-문장중간에 사용할 경우에는 &lt;strong&gt;띄어 쓰기&lt;/strong&gt;를 사용하는 것이 좋다.&lt;/p&gt;
-
-&lt;h2 id=&quot;8-이미지&quot;&gt;8. 이미지&lt;/h2&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/assets/images/markdown-syntax/smile.PNG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Alt text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;/assets/images/markdown-syntax/smile.PNG&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;&quot;Optional title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;br /&gt;
-&lt;img src=&quot;/assets/images/markdown-syntax/smile.PNG&quot; alt=&quot;Alt text&quot; /&gt;
-&lt;img src=&quot;/assets/images/markdown-syntax/smile.PNG&quot; alt=&quot;Alt text&quot; title=&quot;smile&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;사이즈 조절 기능은 없기 때문에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;img width=&quot;&quot; height=&quot;&quot;&amp;gt;&amp;lt;/img&amp;gt;&lt;/code&gt;를 이용한다.&lt;/p&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/markdown-syntax/smile.PNG&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/images/markdown-syntax/smile.PNG&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;px(픽셀) 크기 설정&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;smile&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;br /&gt;
-&lt;img src=&quot;/assets/images/markdown-syntax/smile.PNG&quot; width=&quot;100px&quot; height=&quot;100px&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt; 
- &lt;br /&gt;
-&lt;img src=&quot;/assets/images/markdown-syntax/smile.PNG&quot; width=&quot;10%&quot; height=&quot;10%&quot; title=&quot;px(픽셀) 크기 설정&quot; alt=&quot;smile&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;9-줄-바꿈&quot;&gt;9. 줄 바꿈&lt;/h2&gt;
-
-&lt;p&gt;3칸 이상 띄어쓰기(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;   &lt;/code&gt;)를 하면 줄이 바뀐다.&lt;/p&gt;
-
-&lt;p&gt;일반 줄바꿈이 동작하지 않는 환경(설정 및 버전에 따라)의 경우, ‘3칸 이상의 띄어쓰기’나 &amp;lt;br&amp;gt;를 활용할 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.
-이렇게
-&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; 줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.___
-이렇게
-
-동해물과 백두산이 마르고 닳도록 
-하느님이 보우하사 우리나라 만세   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--띄어쓰기 2번--&amp;gt;&lt;/span&gt;
-무궁화 삼천리 화려 강산&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
-대한 사람 대한으로 길이 보전하세
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.&lt;br /&gt;이렇게&lt;/li&gt;
-  &lt;li&gt;줄 바꿈을 하기 위해서는 문장 마지막에서 3칸이상을 띄어쓰기 해야한다.   &lt;br /&gt;
-이렇게&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;동해물과 백두산이 마르고 닳도록 
-하느님이 보우하사 우리나라 만세 &lt;br /&gt;
-무궁화 삼천리 화려 강산&lt;br /&gt;
-대한 사람 대한으로 길이 보전하세&lt;/p&gt;
-
-&lt;h2 id=&quot;10-table-표&quot;&gt;10. Table 표&lt;/h2&gt;
-
-&lt;p&gt;헤더 셀을 구분할때 3개 이상의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;(hyphen/dash) 기호가 필요하다.
-헤더 셀을 구분하면서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:&lt;/code&gt;(Colons)기호로 셀(열/칸) 안에 내용을 정렬할 수 있다.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;오른쪽 정렬 — &lt;br /&gt;
-가운데 정렬 :—: &lt;br /&gt; 
-왼쪽 정렬 —: &lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;가장 좌측과 가장 우측에 있는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;|&lt;/code&gt;(virtical bar) 기호는 생략 가능하다.&lt;/p&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 | 2 | 3
----|:---:|---:
-오른쪽 정렬 | 가운데 정렬 | 왼쪽정렬
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;1&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;2&lt;/th&gt;
-      &lt;th style=&quot;text-align: right&quot;&gt;3&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;오른쪽 정렬&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;가운데 정렬&lt;/td&gt;
-      &lt;td style=&quot;text-align: right&quot;&gt;왼쪽정렬&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&quot;11-마크다운-포맷-무시하기&quot;&gt;11. 마크다운 포맷 무시하기&lt;/h2&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;ge&quot;&gt;*이건데*&lt;/span&gt;  &lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;이렇게&lt;span class=&quot;se&quot;&gt;\*&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;: &lt;br /&gt;
-&lt;em&gt;이건데&lt;/em&gt;  *이렇게*&lt;/p&gt;
-
-&lt;h2 id=&quot;12-이모지-emoji&quot;&gt;12. 이모지 emoji&lt;/h2&gt;
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:[이모지 텍스트]:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:
-:heart:, :smile:, :revolving_hearts:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;단축키&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;window10: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;윈도우 키&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;마침표(.)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;mac: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;command&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Control&lt;/code&gt; + &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spacce bar&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;이모지 텍스트 참조: &lt;a href=&quot;https://doozi316.github.io/markdown/2020/08/10/MD2/,&quot; title=&quot;emojiRef&quot;&gt;emoji&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;13-체크박스check-box&quot;&gt;13. 체크박스(Check Box)&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; 뒤에 띄어쓰기 후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt;를 넣어 작성한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[]&lt;/code&gt;안에 띄어쓰기를 하면 빈 체크박스, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;를 넣으면 체크된 체크박스가 생긴다.&lt;/p&gt;
-
-&lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; [ ] 운동하기
-&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; [x] 강의듣기
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;적용예&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;운동하기&lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;강의듣기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;http://nblog.syszone.co.kr/archives/9917&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;https://steemit.com/kr/@nand/markdown&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;https://heropy.blog/2017/09/30/markdown&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;https://gist.github.com/ihoneymon/652be052a0727ad59601&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Markdown" /><category term="Markdown" /><summary type="html">마크다운 문법을 정복해보자</summary></entry><entry><title type="html">[Jekyll]Notice 스타일 적용하기</title><link href="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style/" rel="alternate" type="text/html" title="[Jekyll]Notice 스타일 적용하기" /><published>2020-11-14T00:00:00+09:00</published><updated>2020-11-14T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style</id><content type="html" xml:base="http://localhost:4000/%EB%B9%B5%EB%B6%80%EC%8A%A4%EB%9F%AC%EA%B8%B0/apply-notice-style/">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**Notice.:**
-기본적인 Notice
-{: .notice}
-
-**Promary Notice**
-중요한 Notice
-{: .notice--primary}
-
-**Info Notice**
-정보 Notice
-{: .notice--info}
-
-**warning Notice:**
-경고 Notice
-{: .notice--warning}
-
-**Danger Notice:**
-Danger Notice
-{: .notice--danger}
-
-**Success Notice:**
-Success Notice
-{: .notice--success}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;적용예:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Notice.:&lt;/strong&gt;
-기본적인 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--primary&quot;&gt;&lt;strong&gt;Promary Notice&lt;/strong&gt;
-중요한 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Info Notice&lt;/strong&gt;
-정보 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;warning Notice:&lt;/strong&gt;
-경고 Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--danger&quot;&gt;&lt;strong&gt;Danger Notice:&lt;/strong&gt;
-Danger Notice&lt;/p&gt;
-
-&lt;p class=&quot;notice--success&quot;&gt;&lt;strong&gt;Success Notice:&lt;/strong&gt;
-Success Notice&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="빵부스러기" /><category term="notice" /><category term="jekyll" /><summary type="html">텍스트 블럭을 예쁘게 장식해보자</summary></entry></feed>
+&lt;p&gt;https://gmlwjd9405.github.io/2018/05/25/git-add-cancle.html&lt;/p&gt;</content><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><category term="Git" /><category term="Git" /><summary type="html">add, commit, push 실수를 했을 때, 당황하지말고 이 포스팅을 보자</summary></entry></feed>

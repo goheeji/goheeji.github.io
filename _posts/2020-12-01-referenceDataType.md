@@ -42,7 +42,7 @@ public class Student {
 ```
 위의 코드는 클래스의 성격상 좋은방법이아니다. 학생클래스인데 과목얘기가 더많이 있기 때문이다. Student클래스에서 Subject에 대한 속성은 Subject클래스를 만들자.
 
-```java Student.java
+```java
 package reference;
 
 public class Student {
@@ -76,7 +76,7 @@ public class Student {
 
 ```
 
-```java Subject.java
+```java
 package reference;
 
 public class Subject {

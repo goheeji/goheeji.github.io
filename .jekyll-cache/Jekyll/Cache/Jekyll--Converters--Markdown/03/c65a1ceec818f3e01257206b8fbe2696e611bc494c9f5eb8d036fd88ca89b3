@@ -1,0 +1,8 @@
+I"�<h1 id="정보-은닉-information-hiding">정보 은닉 information hiding</h1>
+<h2 id="접근-제어자access-modifier">접근 제어자(access modifier)</h2>
+<ul>
+  <li>변수 메서드, 생성자에 대한 접근 권한 지정</li>
+  <li>public, private, protected, 아무것도 안쓰는 경우(기본 접근 제어자)</li>
+  <li>private를 사용하면 클래스 외부에서는 접근 할 수 없음</li>
+</ul>
+:ET

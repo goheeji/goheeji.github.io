@@ -58,4 +58,34 @@ var store = [{
         "tags": ["java","reference data type"],
         "url": "http://localhost:4000/java/referenceDataType/",
         "teaser": null
+      },{
+        "title": "[Java] 객체 간 협력",
+        "excerpt":"객체 간 협력     객체 지향 프로그램은 객체를 정의하고 객체간의 협력을 구현한 프로그램   학생이 지하철이나 버스를 타고 학교 가는 과정에서 일어나는 협력      ","categories": ["Java"],
+        "tags": ["java"],
+        "url": "http://localhost:4000/java/cooperation/",
+        "teaser": null
+      },{
+        "title": "[Java] 정보 은닉 (information hiding)",
+        "excerpt":"접근 제어자(access modifier) 변수 메서드, 생성자에 대한 접근 권한 지정 public, private, protected, 아무것도 안쓰는 경우(기본 접근 제어자) private를 사용하면 클래스 외부에서는 접근 할 수 없음 public은 외부에 모두 오픈하겠다. private 클래스 내부에서만 사용하겠다. protected 상위클래스가 가진 private 변수나 메소드를 하위클래스에 퍼블릭하게 오픈하고싶을때 사용겠다. (나중에 자세히 살펴봄!) 기본접근제어자는 같은 패키지...","categories": ["Java"],
+        "tags": ["java"],
+        "url": "http://localhost:4000/java/information-hiding/",
+        "teaser": null
+      },{
+        "title": "[Java] Singleton Pattern",
+        "excerpt":"단 하나만 존재하는 인스턴스 - singleton pattern ex) 학교, 회사, 날짜 생성자는 private으로 만든다. static으로 유일한 객체를 생성 외부에서 유일한 객체를 참조할 수 있는 public static get() 메서드 구현 package staticex; public class Company { private static Company instance = new Company(); // 자기자신의 타입을 가진 변수 인스턴스를 만든다. private...","categories": ["Java"],
+        "tags": ["java","singleton pattern"],
+        "url": "http://localhost:4000/java/singleton-Pattern/",
+        "teaser": null
+      },{
+        "title": "[Java] static 변수와 static 메서드",
+        "excerpt":"static 변수 여러 인스턴스가 하나의 값을 공유할 필요가 있어서 사용! static 변수는 처음 프로그램이 로드 될 때 데이터 영역에 생성된다. 인스턴스의 생성과 상관 없이 사용할 수 있으므로 클래스 이름으로 참조한다. Student.serialNum = 100; 클래스 변수, 정적 변수라고도 한다. static 변수와 인스턴스 변수 데이터 영역에 위치한 동일한 메모리를 참조 static 메서드...","categories": ["Java"],
+        "tags": ["java"],
+        "url": "http://localhost:4000/java/static-variable,static-method/",
+        "teaser": null
+      },{
+        "title": "[Java] this",
+        "excerpt":"this의 역할 자기자신의 메모리를 가리킴 생성자에서 다른 생성자를 호출 함 인스턴스 자신의 주소를 반환 자기 자신의 메모리를 가리키는 this 생성자에서 다른 생성자를 호출 이렇게 사용하지않고, public Person(){ this.name = \"이름없음\" this.age = 1; } 이렇게 사용함 public Person(){ this(\"이름없음\", 1); } public Person(String name, int age){ this.name = name; this.age...","categories": ["Java"],
+        "tags": ["java","this"],
+        "url": "http://localhost:4000/java/this/",
+        "teaser": null
       }]

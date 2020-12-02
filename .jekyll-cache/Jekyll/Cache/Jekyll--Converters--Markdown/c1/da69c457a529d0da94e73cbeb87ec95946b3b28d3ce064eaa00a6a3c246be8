@@ -1,0 +1,35 @@
+I"�<h2 id="static-변수">static 변수</h2>
+<ul>
+  <li>
+    <p>여러 인스턴스가 하나의 값을 공유할 필요가 있어서 사용!
+<img src="/assets/images/java/static/1.png" /><br /><br /></p>
+  </li>
+  <li>static 변수는 처음 프로그램이 로드 될 때 데이터 영역에 생성된다.</li>
+  <li>인스턴스의 생성과 상관 없이 사용할 수 있으므로 클래스 이름으로 참조한다.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Student</span><span class="o">.</span><span class="na">serialNum</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>클래스 변수, 정적 변수라고도 한다.</li>
+</ul>
+
+<h2 id="static-변수와-인스턴스-변수">static 변수와 인스턴스 변수</h2>
+
+<p>데이터 영역에 위치한 동일한 메모리를 참조
+<img src="/assets/images/java/static/2.png" /><br /><br /></p>
+
+<h2 id="static-메서드">static 메서드</h2>
+<ul>
+  <li>static 변수를 위한 기능을 제공하는 static 메서드</li>
+  <li><strong>static메서드에서는 인스턴스 변수를 사용할 수 없음</strong></li>
+  <li>클래스 이름으로 참조하여 사용하는 메서드</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Student</span><span class="o">.</span><span class="na">getSerialNum</span><span class="o">();</span>
+</code></pre></div></div>
+<ul>
+  <li>클래스 메서드, 정적 메서드라고도 함.</li>
+</ul>
+
+<h2 id="프로그램에서-변수의-유형">프로그램에서 변수의 유형</h2>
+<p><img src="/assets/images/java/static/3.png" /><br /><br /></p>
+:ET

@@ -66,9 +66,9 @@ public class Student {
 }
 
 ```
-위의 Student클래스에서 studentID, studentName, address들은 클래스에서 전반적으로 쓰는 멤버변수이다. 
-멤버변수의 생성시기?  new했을때 
-생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.
+위의 Student클래스에서 studentID, studentName, address들은 클래스에서 전반적으로 쓰는 멤버변수이다.<br> 
+멤버변수의 생성시기?  new했을때<br> 
+생성 위치 ? 힙(Heap)이라는 메모리에 생긴다.<br>
 힙(Heap)은 동적메모리라고한다.
 
 <img src="/assets/images/java/Instance&HeapMemory/2.png" width="50%" height="50%"><br><br>

@@ -1,0 +1,59 @@
+I"w<h2 id="단-하나만-존재하는-인스턴스---singleton-pattern">단 하나만 존재하는 인스턴스 - singleton pattern</h2>
+<p>ex) 학교, 회사, 날짜</p>
+
+<ul>
+  <li>생성자는 private으로 만든다.</li>
+  <li>static으로 유일한 객체를 생성</li>
+  <li>외부에서 유일한 객체를 참조할 수 있는 public static get() 메서드 구현<br />
+<img src="/assets/images/java/singleton-pattern/1.png" /><br /><br /></li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">staticex</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Company</span> <span class="o">{</span>
+
+	<span class="kd">private</span> <span class="kd">static</span> <span class="nc">Company</span> <span class="n">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Company</span><span class="o">();</span> <span class="c1">// 자기자신의 타입을 가진 변수 인스턴스를 만든다.</span>
+	<span class="kd">private</span> <span class="nf">Company</span><span class="o">()</span> <span class="o">{</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="nc">Company</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// 외부에서 인스턴스의 생성과 상관없이 호출하기위해 static으로 한다.</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">instance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Company</span><span class="o">();</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">instance</span><span class="o">;</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">staticex</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CompanyTest</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// TODO Auto-generated method stub</span>
+		<span class="nc">Company</span> <span class="n">company1</span> <span class="o">=</span> <span class="nc">Company</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		<span class="nc">Company</span> <span class="n">company2</span> <span class="o">=</span> <span class="nc">Company</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+		
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">company1</span><span class="o">);</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">company2</span><span class="o">);</span>
+	
+
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+<p>단 하나만 생성이 되므로 company1 과 company2의 값은 같다.</p>
+
+<p>날짜로 예를들면,</p>
+
+<p>이렇게 하면 안된다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Calendar</span> <span class="n">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Calendar</span><span class="o">();</span>
+</code></pre></div></div>
+<p>이렇게 가져와야한다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Calendar</span> <span class="n">calendar</span> <span class="o">=</span> <span class="nc">Calendar</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+</code></pre></div></div>
+:ET

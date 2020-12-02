@@ -1,0 +1,56 @@
+I"�<h2 id="this의-역할">this의 역할</h2>
+<ul>
+  <li>자기자신의 메모리를 가리킴</li>
+  <li>생성자에서 다른 생성자를 호출 함</li>
+  <li>인스턴스 자신의 주소를 반환
+    <h2 id="자기-자신의-메모리를-가리키는-this">자기 자신의 메모리를 가리키는 this</h2>
+    <p>[그림1]</p>
+  </li>
+</ul>
+
+<h2 id="생성자에서-다른-생성자를-호출">생성자에서 다른 생성자를 호출</h2>
+
+<p>이렇게 사용하지않고,</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nf">Person</span><span class="o">(){</span>
+	<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"이름없음"</span>
+	<span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>이렇게 사용함</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nf">Person</span><span class="o">(){</span>
+	<span class="k">this</span><span class="o">(</span><span class="s">"이름없음"</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="nf">Person</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">){</span>
+	<span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+	<span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>주의점은 this로 다른 생성자를 호출할때 this()가 first statement여야 한다.</p>
+
+<h2 id="인스턴스-자신의-주소를-반환">인스턴스 자신의 주소를 반환</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="nc">Person</span> <span class="nf">getSelf</span><span class="o">()</span> <span class="o">{</span><span class="c1">// 이때 반환타입은 자기 클래스타입</span>
+		<span class="k">return</span> <span class="k">this</span><span class="o">;</span> 
+	<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PersonTest</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		
+		<span class="nc">Person</span> <span class="n">personKo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Person</span><span class="o">(</span><span class="s">"Ko"</span><span class="o">,</span> <span class="mi">25</span><span class="o">);</span>
+		<span class="n">personKo</span><span class="o">.</span><span class="na">showInfo</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">personKo</span><span class="o">);</span>
+
+		<span class="nc">Person</span> <span class="n">p</span> <span class="o">=</span> <span class="n">personKo</span><span class="o">.</span><span class="na">getSelf</span><span class="o">();</span>
+		<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+<p>personKo의 출력값과 p의 출력값이 같다</p>
+
+:ET

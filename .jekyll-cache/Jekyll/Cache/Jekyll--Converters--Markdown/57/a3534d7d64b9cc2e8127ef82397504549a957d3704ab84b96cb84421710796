@@ -1,0 +1,90 @@
+I"�<h2 id="접근-제어자access-modifier">접근 제어자(access modifier)</h2>
+<ul>
+  <li>변수 메서드, 생성자에 대한 접근 권한 지정</li>
+  <li>public, private, protected, 아무것도 안쓰는 경우(기본 접근 제어자)</li>
+  <li>
+    <p>private를 사용하면 클래스 외부에서는 접근 할 수 없음</p>
+  </li>
+  <li>public은 외부에 모두 오픈하겠다.</li>
+  <li>private 클래스 내부에서만 사용하겠다.</li>
+  <li>protected 상위클래스가 가진 private 변수나 메소드를 하위클래스에 퍼블릭하게 오픈하고싶을때 사용겠다. (나중에 자세히 살펴봄!)</li>
+  <li>기본접근제어자는 같은 패키지 내에서만 참조가능</li>
+</ul>
+
+<p>private 키워드를 통해서 정보은닉 구현이 가능하다
+그방법에 대해서 알아보자</p>
+
+<h2 id="정보은닉information-hiding">정보은닉(information hiding)</h2>
+<ul>
+  <li>외부에서 클래스 내부의 정보에 접근하지 못하도록함
+  private 키워드를 활용</li>
+  <li>private 변수를 외부에서 접근하게 하려면 public 메서드를 제공할수 있다.</li>
+  <li>통상적으로 get set을 많이쓴다.</li>
+  <li>클래스 내부 데이터를 잘못 사용하는 오류를 방지 할 수 있음</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyDate</span> <span class="o">{</span>
+
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">day</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">month</span><span class="o">;</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">year</span><span class="o">;</span>
+
+	<span class="kd">private</span> <span class="kt">boolean</span> <span class="n">isValid</span><span class="o">;</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDay</span><span class="o">(</span><span class="kt">int</span> <span class="n">day</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// 값을 넣을때</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">day</span> <span class="o">=</span> <span class="n">day</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getDay</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// 값을 가져갈때</span>
+		<span class="k">return</span> <span class="n">day</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getMonth</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">month</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setMonth</span><span class="o">(</span><span class="kt">int</span> <span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+
+		<span class="k">if</span> <span class="o">(</span><span class="n">month</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">month</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">isValid</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="o">}</span> <span class="k">else</span>
+			<span class="k">this</span><span class="o">.</span><span class="na">month</span> <span class="o">=</span> <span class="n">month</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getYear</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">year</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setYear</span><span class="o">(</span><span class="kt">int</span> <span class="n">year</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">year</span> <span class="o">=</span> <span class="n">year</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">showDate</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">isValid</span><span class="o">)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">year</span> <span class="o">+</span> <span class="s">"년"</span> <span class="o">+</span> <span class="n">month</span> <span class="o">+</span> <span class="s">"월"</span> <span class="o">+</span> <span class="n">day</span> <span class="o">+</span> <span class="s">"일"</span><span class="o">);</span>
+		<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"유효하지 않은 날짜 입니다."</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyDateTest</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// TODO Auto-generated method stub</span>
+		<span class="nc">MyDate</span> <span class="n">date</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MyDate</span><span class="o">();</span>
+		
+		<span class="n">date</span><span class="o">.</span><span class="na">setYear</span><span class="o">(</span><span class="mi">2020</span><span class="o">);</span>
+		<span class="n">date</span><span class="o">.</span><span class="na">setMonth</span><span class="o">(</span><span class="mi">1200</span><span class="o">);</span>
+		<span class="n">date</span><span class="o">.</span><span class="na">setDay</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+		
+		<span class="n">date</span><span class="o">.</span><span class="na">showDate</span><span class="o">();</span>
+
+	<span class="o">}</span>
+
+<span class="o">}</span>
+
+</code></pre></div></div>
+:ET
