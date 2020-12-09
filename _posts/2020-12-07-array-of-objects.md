@@ -15,12 +15,12 @@ tags:
 ```java
 int[] arr = new int[10];
 ```
-<img src="https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/1.png"><br>
+<img src="/assets/images/java/array-of-objects/1.png"><br><br>
 
 ```java
 Book[] library = new Book[5]; //선언 방법
 ```
-<img src="https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/2.png"><br>
+<img src="/assets/images/java/array-of-objects/2.png"><br><br>
 나중에 생성할 객체의 주소값을 담는다.
 
 ```java
@@ -83,7 +83,7 @@ for(Book book : copyLibrary)
 
 ## 객체 배열 복사
 ### 얕은 복사
-<img src="https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/3.png"><br>
+<img src="/assets/images/java/array-of-objects/3.png"><br><br>
 인스턴스가 같다
 
 //얕은 복사 예제
@@ -120,7 +120,7 @@ public class ObjectCopy {
 }
 ```
 ### 깊은 복사
-<img src="https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/4.png"><br>
+<img src="/assets/images/java/array-of-objects/4.png"><br><br>
 인스턴스가 다르다.
 
 //깊은복사 예제

@@ -1,9 +1,0 @@
-I"R<h1 id="다차원-배열">다차원 배열</h1>
-<ul>
-  <li>2차원 이상의 배열</li>
-  <li>지도, 게임, 평면이나 공간을 구현할 때 사용</li>
-  <li>이차원 배열의 예
-<img src="https://github.com/goheeji/TIL/blob/master/JAVA/multi-dimensional-arrays/1.png" /><br />
-행을 기준으로 열을 돌린다.</li>
-</ul>
-:ET

@@ -14,7 +14,7 @@ tags:
 - 자바에서 제공되는 객체 배열이 구현된 클래스
 - 객체 배열을 사용하는데 필요한 여러 메서드들이 구현되어 있음
 - 주요메서드
-<img src="https://github.com/goheeji/TIL/blob/master/JAVA/arrayList/1.png"><br>
+<img src="/assets/images/java/arraylist/1.png"><br><br>
 
 메서드 사용 예제
 
@@ -51,7 +51,7 @@ Lee 학생은 두 과목을 수강하고, Kim 학생은 세 과목을 수강합�
 Student  클래스에 ArrayList 멤버변수를 하나 가지고 각 학생이 수강하는 과목을 관리 하도록 합니다.
 
 출력예시:<br>
-<img src="https://github.com/goheeji/TIL/blob/master/JAVA/arrayList/2.png"><br>
+<img src="/assets/images/java/arraylist/2.png"><br><br>
 
 - Student.java
 

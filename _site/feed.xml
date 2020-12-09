@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-09T18:50:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] ArrayList</title><link href="http://localhost:4000/java/arraylist/" rel="alternate" type="text/html" title="[Java] ArrayList" /><published>2020-12-07T00:00:00+09:00</published><updated>2020-12-07T00:00:00+09:00</updated><id>http://localhost:4000/java/arraylist</id><content type="html" xml:base="http://localhost:4000/java/arraylist/">&lt;h2 id=&quot;arraylist-클래스&quot;&gt;ArrayList 클래스&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-12-09T18:57:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">너구리의 기술 블로그</title><subtitle>너굴너굴</subtitle><author><name>고희지</name><email>mailto:gmlwl0489@daum.net</email></author><entry><title type="html">[Java] ArrayList</title><link href="http://localhost:4000/java/arraylist/" rel="alternate" type="text/html" title="[Java] ArrayList" /><published>2020-12-07T00:00:00+09:00</published><updated>2020-12-07T00:00:00+09:00</updated><id>http://localhost:4000/java/arraylist</id><content type="html" xml:base="http://localhost:4000/java/arraylist/">&lt;h2 id=&quot;arraylist-클래스&quot;&gt;ArrayList 클래스&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;자바에서 제공되는 객체 배열이 구현된 클래스&lt;/li&gt;
   &lt;li&gt;객체 배열을 사용하는데 필요한 여러 메서드들이 구현되어 있음&lt;/li&gt;
   &lt;li&gt;주요메서드
-&lt;img src=&quot;https://github.com/goheeji/TIL/blob/master/JAVA/arrayList/1.png&quot; /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;img src=&quot;/assets/images/java/arraylist/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;메서드 사용 예제&lt;/p&gt;
@@ -40,7 +40,7 @@
 &lt;p&gt;Student  클래스에 ArrayList 멤버변수를 하나 가지고 각 학생이 수강하는 과목을 관리 하도록 합니다.&lt;/p&gt;
 
 &lt;p&gt;출력예시:&lt;br /&gt;
-&lt;img src=&quot;https://github.com/goheeji/TIL/blob/master/JAVA/arrayList/2.png&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/java/arraylist/2.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Student.java&lt;/li&gt;
@@ -161,8 +161,8 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;메모리 구조
-사진[1]
+  &lt;li&gt;메모리 구조&lt;br /&gt;
+&lt;img src=&quot;/assets/images/java/array/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 배열은 물리적인위치와 논리적인 위치가 동일하다.
 0번째 부터 시작한다.
 배열의 길이: length
@@ -219,11 +219,11 @@
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/1.png&quot; /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/array-of-objects/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;library&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Book&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//선언 방법&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/2.png&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/array-of-objects/2.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 나중에 생성할 객체의 주소값을 담는다.&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BookArrayTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -282,7 +282,7 @@
 
 &lt;h2 id=&quot;객체-배열-복사&quot;&gt;객체 배열 복사&lt;/h2&gt;
 &lt;h3 id=&quot;얕은-복사&quot;&gt;얕은 복사&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/3.png&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/array-of-objects/3.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 인스턴스가 같다&lt;/p&gt;
 
 &lt;p&gt;//얕은 복사 예제&lt;/p&gt;
@@ -318,7 +318,7 @@
 &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;깊은-복사&quot;&gt;깊은 복사&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/goheeji/TIL/blob/master/JAVA/array-of-objects/4.png&quot; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/java/array-of-objects/4.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 인스턴스가 다르다.&lt;/p&gt;
 
 &lt;p&gt;//깊은복사 예제&lt;/p&gt;
@@ -369,7 +369,7 @@
   &lt;li&gt;2차원 이상의 배열&lt;/li&gt;
   &lt;li&gt;지도, 게임, 평면이나 공간을 구현할 때 사용&lt;/li&gt;
   &lt;li&gt;이차원 배열의 예
-&lt;img src=&quot;https://github.com/goheeji/TIL/blob/master/JAVA/multi-dimensional-arrays/1.png&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/images/java/multi-dimensional-arrays/1.png&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
 행을 기준으로 열을 돌린다.&lt;/li&gt;
 &lt;/ul&gt;
 
