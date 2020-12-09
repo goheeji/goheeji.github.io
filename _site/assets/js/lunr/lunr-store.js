@@ -88,4 +88,28 @@ var store = [{
         "tags": ["java","this"],
         "url": "http://localhost:4000/java/this/",
         "teaser": null
+      },{
+        "title": "[Java] 객체배열",
+        "excerpt":"기본자료형 배열과 참조 자료형 배열(객체 배열) int[] arr = new int[10]; Book[] library = new Book[5]; //선언 방법 나중에 생성할 객체의 주소값을 담는다. public class BookArrayTest { public static void main(String[] args) { Book[] library = new Book[5]; // 책이 5권이 생긴것이아니라 배열이 생긴것이다. //책이 5권이 생기려면 다섯번 new를해야한다 library[0]...","categories": ["Java"],
+        "tags": ["java","array"],
+        "url": "http://localhost:4000/java/array-of-objects/",
+        "teaser": null
+      },{
+        "title": "[Java] 배열(Array)",
+        "excerpt":"배열이란 동일한 자료형의 순차적 자료구조 배열 선언하기 int[] arr = new int[10]; int arr[] = new int[10]; 메모리 구조 사진[1] 배열은 물리적인위치와 논리적인 위치가 동일하다. 0번째 부터 시작한다. 배열의 길이: length 배열의 인덱스값 0 ~ length-1 배열 문제 문자 배열을 생성하고 출력해 보세요. 대문자를 A-Z까지 배열에 저장하고 이를 다시 출력하는...","categories": ["Java"],
+        "tags": ["java","array"],
+        "url": "http://localhost:4000/java/array/",
+        "teaser": null
+      },{
+        "title": "[Java] ArrayList",
+        "excerpt":"ArrayList 클래스 자바에서 제공되는 객체 배열이 구현된 클래스 객체 배열을 사용하는데 필요한 여러 메서드들이 구현되어 있음 주요메서드 메서드 사용 예제 import java.util.ArrayList; public class ArrayListTest { public static void main(String[] args) { ArrayList&lt;String&gt; list = new ArrayList&lt;String&gt;(); list.add(\"aaa\"); //값 넣기 list.add(\"bbb\"); list.add(\"ccc\"); for (int i = 0; i &lt; list.size();...","categories": ["Java"],
+        "tags": ["java","ArrayList"],
+        "url": "http://localhost:4000/java/arraylist/",
+        "teaser": null
+      },{
+        "title": "[Java] 다차원 배열",
+        "excerpt":"다차원 배열이란? 2차원 이상의 배열 지도, 게임, 평면이나 공간을 구현할 때 사용 이차원 배열의 예 행을 기준으로 열을 돌린다. //2차원 배열 예제 public class TwoDimension { public static void main(String[] args) { int[][] arr = { { 1, 2, 3 }, { 4, 5, 6,7 } }; // new하지 않고...","categories": ["Java"],
+        "tags": ["java","array"],
+        "url": "http://localhost:4000/java/multi-dimensional-arrays/",
+        "teaser": null
       }]
