@@ -20,7 +20,7 @@ title                    : "고희지의 기술 블로그" #Meta 태그에 들�
 title_separator          : "-" # 타이틀 사이 구분자 <title>Welcome to Jekyll | Minimal Mistakes</title> 해당 형식으로 들어갑니다.
 subtitle                 : "기술 블로그" #타이틀 아래에 나올 작은 글씨 # site tagline that appears below site title in masthead
 name                     : "고희지" # 맨 하단 이름 찍히는 영역
-description              : "안녕하세요. 고희지입니다." # Meta 태그에 들어가는 영역
+description              : "" # Meta 태그에 들어가는 영역
 url                      : "https://goheeji.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : #"my-baseurl" # the subpath of your site, e.g. "/blog"
 repository               : "goheeji/goheeji.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "고희지"
   avatar           : "/assets/images/profile/resume.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "너굴너굴"
+  bio              : "안녕하세요. 고희지입니다."
   location         : "Republic of Korea"
   email            : "mailto:gmlwl0489@daum.net"
   links:
